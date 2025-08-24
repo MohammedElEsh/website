@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mohamed&nbsp;M.&nbsp;El&nbsp;Esh&nbsp;– Portfolio</title>
+    <!--
+      This site was created from scratch for a portfolio based on Mohamed M. El Esh’s CV.
+      All assets used are stored locally in the `website` folder (see images and PDF).
+      The layout is responsive and adapts to various screen sizes. A small script at
+      the bottom of this file handles the mobile navigation toggling and smooth
+      scrolling behaviour.
+    -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <header class="header">
+      <nav class="navbar">
+        <div class="logo">Mohamed&nbsp;El Esh</div>
+        <button class="menu-toggle" aria-label="Toggle navigation">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section id="home" class="section hero-section">
+        <div class="hero-content">
+          <h1>Mohamed&nbsp;M.&nbsp;El&nbsp;Esh</h1>
+          <p class="tagline">Junior Flutter Developer</p>
+          <p class="intro-text">
+            Passionate about crafting high‑performance mobile experiences using
+            Flutter. I build responsive apps employing clean architecture and
+            modern design patterns.
+          </p>
+          <a href="#projects" class="btn primary-btn">View My Work</a>
+          <a href="Mohamed-M-El-Esh-CV.pdf" class="btn secondary-btn" download>Download&nbsp;CV</a>
+        </div>
+        <div class="hero-image">
+          <img src="images/hero.png" alt="Developer illustration" />
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="section about-section">
+        <h2>About Me</h2>
+        <div class="section-content">
+          <p>
+            I am a <strong>junior Flutter developer</strong> with a solid foundation in
+            computer science and a passion for building beautiful,
+            high‑performance mobile applications. My approach focuses on
+            <em>clean architecture</em>, SOLID principles and design patterns. I
+            enjoy working with state management solutions like Bloc,
+            Provider and Riverpod, integrating secure authentication and
+            RESTful APIs using Dio, and supporting multilingual user
+            interfaces.
+          </p>
+          <p>
+            Based in Damietta, Egypt, I am currently studying Computer
+            Science at Damietta University and looking forward to
+            opportunities where I can contribute to engaging mobile products
+            and grow as a developer.
+          </p>
+        </div>
+      </section>
+
+      <!-- Education Section -->
+      <section id="education" class="section education-section">
+        <h2>Education</h2>
+        <div class="section-content">
+          <div class="timeline-item">
+            <span class="timeline-date">2021 – 2025</span>
+            <h3>Damietta University, Egypt</h3>
+            <p>Faculty of Computers and Artificial Intelligence</p>
+            <p>Department: Computer Science</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience Section -->
+      <section id="experience" class="section experience-section">
+        <h2>Work Experience</h2>
+        <div class="section-content experience-list">
+          <!-- Experience Item 1 -->
+          <article class="experience-item">
+            <div class="exp-header">
+              <h3>Sprints × Microsoft — Summer Camp (Remote)</h3>
+              <span class="exp-role">Mobile Development Trainee</span>
+              <span class="exp-date">Jul 2025 – Sep 2025</span>
+            </div>
+            <ul class="exp-details">
+              <li>Practiced stateless and stateful widgets, layouts, gestures and responsive design.</li>
+              <li>Managed app state using Provider to ensure scalable architecture.</li>
+              <li>Explored UI/UX concepts and managed model lifecycle with MLflow and Hugging Face.</li>
+              <li>Implemented bilingual (Arabic/English) support using <code>intl</code> and <code>.arb</code> files.</li>
+              <li>Final project: built a shopping app with authentication, product catalogue, cart and animations.</li>
+            </ul>
+          </article>
+          <!-- Experience Item 2 -->
+          <article class="experience-item">
+            <div class="exp-header">
+              <h3>Digital Egypt Pioneers Initiative – DEPI</h3>
+              <span class="exp-role">Trainee</span>
+              <span class="exp-date">Apr 2024 – Oct 2024</span>
+            </div>
+            <ul class="exp-details">
+              <li>Built a solid foundation in AWS services and cloud architecture.</li>
+              <li>Trained and deployed machine‑learning models using Python and AWS.</li>
+              <li>Used MLflow and Hugging Face to manage the ML model lifecycle.</li>
+              <li>Developed NLP models for text classification and sentiment analysis.</li>
+              <li>Optimised prompts for language models to improve task completion rates.</li>
+            </ul>
+          </article>
+          <!-- Experience Item 3 -->
+          <article class="experience-item">
+            <div class="exp-header">
+              <h3>Samsung Innovation Campus – Cairo</h3>
+              <span class="exp-role">Intern</span>
+              <span class="exp-date">Jun 2023 – Sep 2023</span>
+            </div>
+            <ul class="exp-details">
+              <li>Strengthened programming fundamentals in Python.</li>
+              <li>Applied object‑oriented design principles for modular software.</li>
+              <li>Designed and implemented efficient algorithms.</li>
+              <li>Manipulated data using Pandas and NumPy.</li>
+              <li>Created GUI applications with Tkinter.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects" class="section projects-section">
+        <h2>Key Projects</h2>
+        <div class="section-content project-grid">
+          <!-- Project 1 -->
+          <article class="project-item">
+            <h3>Al Baker Air Conditioning App</h3>
+            <p>
+              Built an e‑commerce and services application with Arabic user
+              interface, JWT authentication and RESTful API integration using
+              Dio. Features include a product catalogue, cart, payment
+              processing and service scheduling enhanced with Lottie
+              animations.
+            </p>
+          </article>
+          <!-- Project 2 -->
+          <article class="project-item">
+            <h3>QRoll Attendance App</h3>
+            <p>
+              Designed a role‑based attendance app with QR code scanning, JWT
+              authentication and real‑time messaging. Leveraged Riverpod for
+              state management, encrypted local storage and REST APIs within a
+              responsive, clean UI.
+            </p>
+          </article>
+          <!-- Project 3 -->
+          <article class="project-item">
+            <h3>Flutter Shopping App</h3>
+            <p>
+              Developed a shopping app featuring validated sign‑up/sign‑in forms,
+              animated navigation and PageView/GridView product views. Added
+              cart snackbars and implemented full Arabic localisation using
+              <code>intl</code> while managing state with Provider.
+            </p>
+          </article>
+          <!-- Project 4 -->
+          <article class="project-item">
+            <h3>WhatsApp‑Style Messaging UI</h3>
+            <p>
+              Created a pixel‑perfect messaging interface mimicking WhatsApp.
+              Included home, chat and story screens with light/dark themes,
+              adaptive layouts and micro‑animations for chat, feedback and story
+              transitions. State management powered by Provider.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section id="skills" class="section skills-section">
+        <h2>Technical Skills</h2>
+        <div class="section-content skills-grid">
+          <div class="skill-category">
+            <h3>Languages</h3>
+            <ul>
+              <li>C#</li>
+              <li>Python</li>
+              <li>Dart</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3>Back‑End</h3>
+            <ul>
+              <li>ASP.NET Core (learning)</li>
+              <li>C#</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3>Databases &amp; Storage</h3>
+            <ul>
+              <li>MySQL</li>
+              <li>Firebase</li>
+              <li>JSON</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3>APIs &amp; Networking</h3>
+            <ul>
+              <li>RESTful APIs</li>
+              <li>Dio</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3>Mobile Development</h3>
+            <ul>
+              <li>Flutter</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3>Cloud</h3>
+            <ul>
+              <li>AWS EC2</li>
+              <li>AWS S3</li>
+              <li>AWS Lambda</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3>Version Control</h3>
+            <ul>
+              <li>Git</li>
+              <li>GitHub</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3>Tools</h3>
+            <ul>
+              <li>Jira</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="section contact-section">
+        <h2>Contact</h2>
+        <div class="section-content contact-content">
+          <p>If you'd like to get in touch, feel free to reach out via:</p>
+          <ul class="contact-list">
+            <li>
+              <strong>Phone:</strong>
+              <a href="tel:+201065657237">+20&nbsp;106&nbsp;565&nbsp;7237</a>
+            </li>
+            <li>
+              <strong>Email:</strong>
+              <a href="mailto:mohamedelesh34@gmail.com">mohamedelesh34@gmail.com</a>
+            </li>
+            <li>
+              <strong>LinkedIn:</strong>
+              <a href="#" aria-label="LinkedIn profile">LinkedIn Profile</a>
+            </li>
+            <li>
+              <strong>GitHub:</strong>
+              <a href="#" aria-label="GitHub profile">GitHub Profile</a>
+            </li>
+            <li>
+              <strong>Portfolio:</strong>
+              <a href="#home" aria-label="Portfolio home">This Website</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>&copy; <span id="year"></span> Mohamed&nbsp;M.&nbsp;El&nbsp;Esh. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
