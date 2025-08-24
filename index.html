@@ -3,9 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mohamed&nbsp;M.&nbsp;El&nbsp;Esh&nbsp;– Portfolio</title>
+    <title>Mohamed M. El Esh – Flutter Developer Portfolio</title>
+    <meta name="description" content="Portfolio of Mohamed M. El Esh, a Junior Flutter Developer specializing in mobile app development with clean architecture and modern design patterns." />
+    <meta name="keywords" content="Flutter Developer, Mobile App Development, Dart, Flutter, Portfolio, Mohamed El Esh, Egypt, Mobile Developer" />
+    <meta name="author" content="Mohamed M. El Esh" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mohamedelesh.com/" />
+    <meta property="og:title" content="Mohamed M. El Esh – Flutter Developer Portfolio" />
+    <meta property="og:description" content="Junior Flutter Developer specializing in mobile app development with clean architecture and modern design patterns." />
+    <meta property="og:image" content="images/hero.png" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://mohamedelesh.com/" />
+    <meta property="twitter:title" content="Mohamed M. El Esh – Flutter Developer Portfolio" />
+    <meta property="twitter:description" content="Junior Flutter Developer specializing in mobile app development with clean architecture and modern design patterns." />
+    <meta property="twitter:image" content="images/hero.png" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    
     <!--
-      This site was created from scratch for a portfolio based on Mohamed M. El Esh’s CV.
+      This site was created from scratch for a portfolio based on Mohamed M. El Esh's CV.
       All assets used are stored locally in the `website` folder (see images and PDF).
       The layout is responsive and adapts to various screen sizes. A small script at
       the bottom of this file handles the mobile navigation toggling and smooth
@@ -15,50 +36,63 @@
   </head>
   <body>
     <!-- Navigation Bar -->
-    <header class="header">
-      <nav class="navbar">
-        <div class="logo">Mohamed&nbsp;El Esh</div>
-        <button class="menu-toggle" aria-label="Toggle navigation">
+    <header class="header" role="banner">
+      <nav class="navbar" aria-label="Main navigation">
+        <div class="logo">Mohamed&nbsp;El Esh</div>
+        <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu">
           <span class="bar"></span>
           <span class="bar"></span>
           <span class="bar"></span>
         </button>
-        <ul class="nav-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#contact">Contact</a></li>
+        <ul class="nav-links" id="nav-menu" role="menu">
+          <li role="none"><a href="#home" role="menuitem">Home</a></li>
+          <li role="none"><a href="#about" role="menuitem">About</a></li>
+          <li role="none"><a href="#education" role="menuitem">Education</a></li>
+          <li role="none"><a href="#experience" role="menuitem">Experience</a></li>
+          <li role="none"><a href="#projects" role="menuitem">Projects</a></li>
+          <li role="none"><a href="#skills" role="menuitem">Skills</a></li>
+          <li role="none"><a href="#contact" role="menuitem">Contact</a></li>
+          <li role="none" class="theme-toggle-wrapper">
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" role="switch" aria-checked="false">
+              <span class="sr-only">Toggle dark mode</span>
+              <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                <path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z" />
+              </svg>
+              <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                <path d="M10 7a7 7 0 0 0 12 4.9v.1c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2h.1A6.979 6.979 0 0 0 10 7zm-6 5a8 8 0 0 0 15.062 3.762A9 9 0 0 1 8.238 4.938 7.999 7.999 0 0 0 4 12z" />
+              </svg>
+            </button>
+          </li>
         </ul>
       </nav>
     </header>
 
-    <main>
+    <main role="main">
       <!-- Hero Section -->
-      <section id="home" class="section hero-section">
-        <div class="hero-content">
-          <h1>Mohamed&nbsp;M.&nbsp;El&nbsp;Esh</h1>
-          <p class="tagline">Junior Flutter Developer</p>
-          <p class="intro-text">
+      <section id="home" class="section hero-section" aria-labelledby="hero-heading">
+        <div class="hero-content animate-slide-left">
+          <h1 id="hero-heading">Mohamed&nbsp;M.&nbsp;El&nbsp;Esh</h1>
+          <p class="tagline animate-slide-left animate-delay-100">Junior Flutter Developer</p>
+          <p class="intro-text animate-slide-left animate-delay-200">
             Passionate about crafting high‑performance mobile experiences using
             Flutter. I build responsive apps employing clean architecture and
             modern design patterns.
           </p>
-          <a href="#projects" class="btn primary-btn">View My Work</a>
-          <a href="Mohamed-M-El-Esh-CV.pdf" class="btn secondary-btn" download>Download&nbsp;CV</a>
+          <div class="button-group animate-slide-left animate-delay-300" role="group" aria-label="Portfolio actions">
+            <a href="#projects" class="btn primary-btn" role="button">View My Work</a>
+            <a href="Mohamed-M-El-Esh-CV.pdf" class="btn secondary-btn" download role="button">Download&nbsp;CV</a>
+          </div>
         </div>
-        <div class="hero-image">
+        <div class="hero-image animate-slide-right" aria-hidden="true">
           <img src="images/hero.png" alt="Developer illustration" />
         </div>
       </section>
 
       <!-- About Section -->
-      <section id="about" class="section about-section">
-        <h2>About Me</h2>
+      <section id="about" class="section about-section" aria-labelledby="about-heading">
+        <h2 id="about-heading" class="animate-fade-in">About Me</h2>
         <div class="section-content">
-          <p>
+          <p class="animate-fade-in animate-delay-100">
             I am a <strong>junior Flutter developer</strong> with a solid foundation in
             computer science and a passion for building beautiful,
             high‑performance mobile applications. My approach focuses on
@@ -68,7 +102,7 @@
             RESTful APIs using Dio, and supporting multilingual user
             interfaces.
           </p>
-          <p>
+          <p class="animate-fade-in animate-delay-200">
             Based in Damietta, Egypt, I am currently studying Computer
             Science at Damietta University and looking forward to
             opportunities where I can contribute to engaging mobile products
@@ -78,60 +112,60 @@
       </section>
 
       <!-- Education Section -->
-      <section id="education" class="section education-section">
-        <h2>Education</h2>
+      <section id="education" class="section education-section" aria-labelledby="education-heading">
+        <h2 id="education-heading" class="animate-fade-in">Education</h2>
         <div class="section-content">
-          <div class="timeline-item">
-            <span class="timeline-date">2021 – 2025</span>
+          <div class="timeline-item animate-scale animate-delay-100">
+            <span class="timeline-date">2021 – 2025</span>
             <h3>Damietta University, Egypt</h3>
             <p>Faculty of Computers and Artificial Intelligence</p>
-            <p>Department: Computer Science</p>
+            <p>Department: Computer Science</p>
           </div>
         </div>
       </section>
 
       <!-- Experience Section -->
-      <section id="experience" class="section experience-section">
-        <h2>Work Experience</h2>
-        <div class="section-content experience-list">
+      <section id="experience" class="section experience-section" aria-labelledby="experience-heading">
+        <h2 id="experience-heading" class="animate-fade-in">Work Experience</h2>
+        <div class="section-content experience-list" role="list">
           <!-- Experience Item 1 -->
-          <article class="experience-item">
+          <article class="experience-item animate-scale animate-delay-100" role="listitem">
             <div class="exp-header">
-              <h3>Sprints × Microsoft — Summer Camp (Remote)</h3>
+              <h3 id="exp-1-heading">Sprints × Microsoft — Summer Camp (Remote)</h3>
               <span class="exp-role">Mobile Development Trainee</span>
-              <span class="exp-date">Jul 2025 – Sep 2025</span>
+              <span class="exp-date">Jul 2025 – Sep 2025</span>
             </div>
-            <ul class="exp-details">
+            <ul class="exp-details" aria-labelledby="exp-1-heading">
               <li>Practiced stateless and stateful widgets, layouts, gestures and responsive design.</li>
               <li>Managed app state using Provider to ensure scalable architecture.</li>
-              <li>Explored UI/UX concepts and managed model lifecycle with MLflow and Hugging Face.</li>
+              <li>Explored UI/UX concepts and managed model lifecycle with MLflow and Hugging Face.</li>
               <li>Implemented bilingual (Arabic/English) support using <code>intl</code> and <code>.arb</code> files.</li>
               <li>Final project: built a shopping app with authentication, product catalogue, cart and animations.</li>
             </ul>
           </article>
           <!-- Experience Item 2 -->
-          <article class="experience-item">
+          <article class="experience-item animate-scale animate-delay-200" role="listitem">
             <div class="exp-header">
-              <h3>Digital Egypt Pioneers Initiative – DEPI</h3>
+              <h3 id="exp-2-heading">Digital Egypt Pioneers Initiative – DEPI</h3>
               <span class="exp-role">Trainee</span>
-              <span class="exp-date">Apr 2024 – Oct 2024</span>
+              <span class="exp-date">Apr 2024 – Oct 2024</span>
             </div>
-            <ul class="exp-details">
+            <ul class="exp-details" aria-labelledby="exp-2-heading">
               <li>Built a solid foundation in AWS services and cloud architecture.</li>
               <li>Trained and deployed machine‑learning models using Python and AWS.</li>
-              <li>Used MLflow and Hugging Face to manage the ML model lifecycle.</li>
+              <li>Used MLflow and Hugging Face to manage the ML model lifecycle.</li>
               <li>Developed NLP models for text classification and sentiment analysis.</li>
               <li>Optimised prompts for language models to improve task completion rates.</li>
             </ul>
           </article>
           <!-- Experience Item 3 -->
-          <article class="experience-item">
+          <article class="experience-item animate-scale animate-delay-300" role="listitem">
             <div class="exp-header">
-              <h3>Samsung Innovation Campus – Cairo</h3>
+              <h3 id="exp-3-heading">Samsung Innovation Campus – Cairo</h3>
               <span class="exp-role">Intern</span>
-              <span class="exp-date">Jun 2023 – Sep 2023</span>
+              <span class="exp-date">Jun 2023 – Sep 2023</span>
             </div>
-            <ul class="exp-details">
+            <ul class="exp-details" aria-labelledby="exp-3-heading">
               <li>Strengthened programming fundamentals in Python.</li>
               <li>Applied object‑oriented design principles for modular software.</li>
               <li>Designed and implemented efficient algorithms.</li>
@@ -143,13 +177,13 @@
       </section>
 
       <!-- Projects Section -->
-      <section id="projects" class="section projects-section">
-        <h2>Key Projects</h2>
-        <div class="section-content project-grid">
+      <section id="projects" class="section projects-section" aria-labelledby="projects-heading">
+        <h2 id="projects-heading" class="animate-fade-in">Key Projects</h2>
+        <div class="section-content project-grid" role="list">
           <!-- Project 1 -->
-          <article class="project-item">
-            <h3>Al Baker Air Conditioning App</h3>
-            <p>
+          <article class="project-item animate-scale animate-delay-100" role="listitem">
+            <h3 id="project-1-heading">Al Baker Air Conditioning App</h3>
+            <p aria-labelledby="project-1-heading">
               Built an e‑commerce and services application with Arabic user
               interface, JWT authentication and RESTful API integration using
               Dio. Features include a product catalogue, cart, payment
@@ -158,9 +192,9 @@
             </p>
           </article>
           <!-- Project 2 -->
-          <article class="project-item">
-            <h3>QRoll Attendance App</h3>
-            <p>
+          <article class="project-item animate-scale animate-delay-200" role="listitem">
+            <h3 id="project-2-heading">QRoll Attendance App</h3>
+            <p aria-labelledby="project-2-heading">
               Designed a role‑based attendance app with QR code scanning, JWT
               authentication and real‑time messaging. Leveraged Riverpod for
               state management, encrypted local storage and REST APIs within a
@@ -168,9 +202,9 @@
             </p>
           </article>
           <!-- Project 3 -->
-          <article class="project-item">
-            <h3>Flutter Shopping App</h3>
-            <p>
+          <article class="project-item animate-scale animate-delay-300" role="listitem">
+            <h3 id="project-3-heading">Flutter Shopping App</h3>
+            <p aria-labelledby="project-3-heading">
               Developed a shopping app featuring validated sign‑up/sign‑in forms,
               animated navigation and PageView/GridView product views. Added
               cart snackbars and implemented full Arabic localisation using
@@ -178,9 +212,9 @@
             </p>
           </article>
           <!-- Project 4 -->
-          <article class="project-item">
-            <h3>WhatsApp‑Style Messaging UI</h3>
-            <p>
+          <article class="project-item animate-scale animate-delay-400" role="listitem">
+            <h3 id="project-4-heading">WhatsApp‑Style Messaging UI</h3>
+            <p aria-labelledby="project-4-heading">
               Created a pixel‑perfect messaging interface mimicking WhatsApp.
               Included home, chat and story screens with light/dark themes,
               adaptive layouts and micro‑animations for chat, feedback and story
@@ -191,63 +225,63 @@
       </section>
 
       <!-- Skills Section -->
-      <section id="skills" class="section skills-section">
-        <h2>Technical Skills</h2>
-        <div class="section-content skills-grid">
-          <div class="skill-category">
-            <h3>Languages</h3>
-            <ul>
+    <section id="skills" class="section skills-section" aria-labelledby="skills-heading">
+      <h2 id="skills-heading" class="animate-fade-in">Technical Skills</h2>
+      <div class="section-content skills-grid animate-fade-in animate-delay-100" role="list">
+          <div class="skill-category" role="listitem">
+            <h3 id="skill-languages">Languages</h3>
+            <ul aria-labelledby="skill-languages">
               <li>C#</li>
               <li>Python</li>
               <li>Dart</li>
             </ul>
           </div>
-          <div class="skill-category">
-            <h3>Back‑End</h3>
-            <ul>
-              <li>ASP.NET Core (learning)</li>
+          <div class="skill-category" role="listitem">
+            <h3 id="skill-backend">Back‑End</h3>
+            <ul aria-labelledby="skill-backend">
+              <li>ASP.NET Core (learning)</li>
               <li>C#</li>
             </ul>
           </div>
-          <div class="skill-category">
-            <h3>Databases &amp; Storage</h3>
-            <ul>
+          <div class="skill-category" role="listitem">
+            <h3 id="skill-databases">Databases &amp; Storage</h3>
+            <ul aria-labelledby="skill-databases">
               <li>MySQL</li>
               <li>Firebase</li>
               <li>JSON</li>
             </ul>
           </div>
-          <div class="skill-category">
-            <h3>APIs &amp; Networking</h3>
-            <ul>
+          <div class="skill-category" role="listitem">
+            <h3 id="skill-apis">APIs &amp; Networking</h3>
+            <ul aria-labelledby="skill-apis">
               <li>RESTful APIs</li>
               <li>Dio</li>
             </ul>
           </div>
-          <div class="skill-category">
-            <h3>Mobile Development</h3>
-            <ul>
+          <div class="skill-category" role="listitem">
+            <h3 id="skill-mobile">Mobile Development</h3>
+            <ul aria-labelledby="skill-mobile">
               <li>Flutter</li>
             </ul>
           </div>
-          <div class="skill-category">
-            <h3>Cloud</h3>
-            <ul>
+          <div class="skill-category" role="listitem">
+            <h3 id="skill-cloud">Cloud</h3>
+            <ul aria-labelledby="skill-cloud">
               <li>AWS EC2</li>
               <li>AWS S3</li>
               <li>AWS Lambda</li>
             </ul>
           </div>
-          <div class="skill-category">
-            <h3>Version Control</h3>
-            <ul>
+          <div class="skill-category" role="listitem">
+            <h3 id="skill-version">Version Control</h3>
+            <ul aria-labelledby="skill-version">
               <li>Git</li>
               <li>GitHub</li>
             </ul>
           </div>
-          <div class="skill-category">
-            <h3>Tools</h3>
-            <ul>
+          <div class="skill-category" role="listitem">
+            <h3 id="skill-tools">Tools</h3>
+            <ul aria-labelledby="skill-tools">
               <li>Jira</li>
             </ul>
           </div>
@@ -255,30 +289,30 @@
       </section>
 
       <!-- Contact Section -->
-      <section id="contact" class="section contact-section">
-        <h2>Contact</h2>
-        <div class="section-content contact-content">
+      <section id="contact" class="section contact-section" aria-labelledby="contact-heading">
+        <h2 id="contact-heading" class="animate-fade-in">Contact</h2>
+        <div class="section-content contact-content animate-fade-in animate-delay-100">
           <p>If you'd like to get in touch, feel free to reach out via:</p>
-          <ul class="contact-list">
-            <li>
+          <ul class="contact-list" role="list">
+            <li role="listitem" class="animate-scale animate-delay-200">
               <strong>Phone:</strong>
-              <a href="tel:+201065657237">+20&nbsp;106&nbsp;565&nbsp;7237</a>
+              <a href="tel:+201065657237" class="hover-highlight">+20&nbsp;106&nbsp;565&nbsp;7237</a>
             </li>
-            <li>
+            <li role="listitem" class="animate-scale animate-delay-300">
               <strong>Email:</strong>
-              <a href="mailto:mohamedelesh34@gmail.com">mohamedelesh34@gmail.com</a>
+              <a href="mailto:mohamedelesh34@gmail.com" class="hover-highlight">mohamedelesh34@gmail.com</a>
             </li>
-            <li>
+            <li role="listitem" class="animate-scale animate-delay-400">
               <strong>LinkedIn:</strong>
-              <a href="https://www.linkedin.com/in/mohamed-m-el-esh-a97999283/" aria-label="LinkedIn profile">LinkedIn Profile</a>
+              <a href="https://www.linkedin.com/in/mohamed-m-el-esh-a97999283/" aria-label="LinkedIn profile" class="hover-highlight">LinkedIn Profile</a>
             </li>
-            <li>
+            <li role="listitem" class="animate-scale animate-delay-500">
               <strong>GitHub:</strong>
-              <a href="https://github.com/MohammedElEsh" aria-label="GitHub profile">GitHub Profile</a>
+              <a href="https://github.com/MohammedElEsh" aria-label="GitHub profile" class="hover-highlight">GitHub Profile</a>
             </li>
-            <li>
+            <li role="listitem" class="animate-scale animate-delay-600">
               <strong>Portfolio:</strong>
-              <a href="#home" aria-label="Portfolio home">This Website</a>
+              <a href="#home" aria-label="Portfolio home" class="hover-highlight">This Website</a>
             </li>
           </ul>
         </div>
@@ -286,7 +320,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
       <p>&copy; <span id="year"></span> Mohamed&nbsp;M.&nbsp;El&nbsp;Esh. All rights reserved.</p>
     </footer>
 
