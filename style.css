@@ -458,6 +458,46 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
 }
+
+.project-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.project-btn {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  background-color: var(--primary-color, #0078ff);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.project-btn:hover {
+  background-color: var(--primary-hover, #005fcc);
+  transform: translateY(-2px);
+}
+
+.project-btn.secondary-btn {
+  background-color: #444;
+}
+
+.project-btn.secondary-btn:hover {
+  background-color: #222;
+}
+
+.project-btn.github-btn {
+  background-color: #24292e;
+}
+
+.project-btn.github-btn:hover {
+  background-color: #000;
+}
+
 .project-item {
   background: var(--white);
   border: 1px solid var(--border);
