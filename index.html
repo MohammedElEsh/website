@@ -1,59 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- ========================================
+         DOCUMENT HEAD - METADATA & CONFIGURATION
+         Includes page title, character encoding, viewport, meta tags for SEO,
+         external resources (fonts, styles), and structured data
+         ======================================== -->
+    
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mohamed M. El Esh – Flutter Developer Portfolio</title>
-    <meta name="description" content="Portfolio of Mohamed M. El Esh, a Junior Flutter Developer specializing in mobile app development with clean architecture and modern design patterns." />
-    <meta name="keywords" content="Flutter Developer, Mobile App Development, Dart, Flutter, Portfolio, Mohamed El Esh, Egypt, Mobile Developer" />
+    
+    <!-- ===== PRIMARY META TAGS (SEO & Description) ===== -->
+    <title>Mohamed M. El Esh – Flutter Developer | Mobile App Development Expert</title>
+    <meta name="title" content="Mohamed M. El Esh – Flutter Developer | Mobile App Development Expert" />
+    <meta name="description" content="Flutter Developer with 8+ production apps | Expert in Clean Architecture, BLoC, Firebase & REST APIs | Building high-performance mobile experiences | Available for hire" />
+    <meta name="keywords" content="Flutter Developer, Mobile App Development, Dart, Flutter Expert, Clean Architecture, BLoC, Firebase, REST APIs, Mohamed El Esh, Egypt, Hire Flutter Developer, Mobile Developer Portfolio" />
     <meta name="author" content="Mohamed M. El Esh" />
-    <!-- Open Graph / Facebook -->
+    <meta name="robots" content="index, follow" />
+    
+    <!-- ===== CANONICAL URL (Prevent duplicate content in search engines) ===== -->
+    <link rel="canonical" href="https://mohamedelesh.com/" />
+    
+    <!-- ===== OPEN GRAPH TAGS (Social Media Preview) ===== -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://mohamedelesh.com/" />
-    <meta property="og:title" content="Mohamed M. El Esh – Flutter Developer Portfolio" />
-    <meta property="og:description" content="Junior Flutter Developer specializing in mobile app development with clean architecture and modern design patterns." />
-    <meta property="og:image" content="images/hero.png" />
-    <!-- Twitter -->
+    <meta property="og:title" content="Mohamed M. El Esh – Flutter Developer | Mobile App Expert" />
+    <meta property="og:description" content="Flutter Developer specializing in Clean Architecture, BLoC, and high-performance mobile apps. 8+ production apps built with Firebase & REST APIs." />
+    <meta property="og:image" content="https://mohamedelesh.com/images/og-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    
+    <!-- ===== TWITTER CARD TAGS (Twitter Social Preview) ===== -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://mohamedelesh.com/" />
-    <meta property="twitter:title" content="Mohamed M. El Esh – Flutter Developer Portfolio" />
-    <meta property="twitter:description" content="Junior Flutter Developer specializing in mobile app development with clean architecture and modern design patterns." />
-    <meta property="twitter:image" content="images/hero.png" />
-    <!-- Favicon -->
+    <meta property="twitter:title" content="Mohamed M. El Esh – Flutter Developer" />
+    <meta property="twitter:description" content="Flutter Developer | Clean Architecture Expert | 8+ Production Apps" />
+    <meta property="twitter:image" content="https://mohamedelesh.com/images/og-preview.png" />
+    
+    <!-- ===== FAVICON (Browser Tab Icon) ===== -->
     <link rel="icon" type="image/png" href="images/favicon.png" />
-    <!--
-      This site was created from scratch for a portfolio based on Mohamed M. El Esh's CV.
-      All assets used are stored locally in the `website` folder (see images and PDF).
-      The layout is responsive and adapts to various screen sizes. A small script at
-      the bottom of this file handles the mobile navigation toggling and smooth
-      scrolling behaviour.
-    -->
+    <link rel="apple-touch-icon" href="images/favicon.png" />
+    
+    <!-- ===== PRECONNECT TO EXTERNAL RESOURCES (Performance Optimization) ===== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- ===== GOOGLE FONTS IMPORT (Inter Font Family) ===== -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    
+    <!-- ===== MAIN STYLESHEET ===== -->
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Navigation Bar -->
+    <!-- ========================================
+         MAIN BODY STRUCTURE
+         Contains accessibility skip link, navigation header,
+         main content sections, and footer
+         ======================================== -->
+    
+    <!-- ===== ACCESSIBILITY SKIP LINK (Keyboard Navigation) ===== -->
+    <a href="#main-content" class="sr-only focus-visible">Skip to main content</a>
+    
+    <!-- ========================================
+         NAVIGATION HEADER & MENU
+         Fixed position navigation bar with logo, navigation links,
+         and dark mode toggle button
+         ======================================== -->
     <header class="header" role="banner">
       <nav class="navbar" aria-label="Main navigation">
-        <div class="logo">Mohamed&nbsp;El Esh</div>
+        <!-- Logo/Branding -->
+        <div class="logo">Mohamed El Esh</div>
+        
+        <!-- Mobile Menu Toggle Button -->
         <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu">
           <span class="bar"></span>
           <span class="bar"></span>
           <span class="bar"></span>
         </button>
+        
+        <!-- Navigation Links -->
         <ul class="nav-links" id="nav-menu" role="menu">
-          <li role="none"><a href="#home" role="menuitem">Home</a></li>
+          <li role="none"><a href="#home" role="menuitem">Head</a></li>
           <li role="none"><a href="#about" role="menuitem">About</a></li>
-          <li role="none"><a href="#education" role="menuitem">Education</a></li>
           <li role="none"><a href="#experience" role="menuitem">Experience</a></li>
+          <li role="none"><a href="#education" role="menuitem">Education</a></li>
           <li role="none"><a href="#projects" role="menuitem">Projects</a></li>
           <li role="none"><a href="#skills" role="menuitem">Skills</a></li>
+          <li role="none"><a href="#certificates" role="menuitem">Certificates</a></li>
           <li role="none"><a href="#contact" role="menuitem">Contact</a></li>
+          
+          <!-- Dark Mode Toggle Button -->
           <li role="none" class="theme-toggle-wrapper">
             <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" role="switch" aria-checked="false">
               <span class="sr-only">Toggle dark mode</span>
+              <!-- Sun Icon (shown in dark mode) -->
               <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
                 <path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z" />
               </svg>
+              <!-- Moon Icon (shown in light mode) -->
               <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
                 <path d="M10 7a7 7 0 0 0 12 4.9v.1c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2h.1A6.979 6.979 0 0 0 10 7zm-6 5a8 8 0 0 0 15.062 3.762A9 9 0 0 1 8.238 4.938 7.999 7.999 0 0 0 4 12z" />
               </svg>
@@ -62,377 +106,693 @@
         </ul>
       </nav>
     </header>
-    <main role="main">
-      <!-- Hero Section -->
+
+    <!-- ========================================
+         MAIN CONTENT CONTAINER
+         Wrapper for all page sections
+         ======================================== -->
+    <main role="main" id="main-content">
+      <!-- ========================================
+           HERO SECTION (Landing/Introduction)
+           Features: Name, tagline, introduction text, CTA buttons
+           and showcase images (main + side images)
+           ======================================== -->
       <section id="home" class="section hero-section" aria-labelledby="hero-heading">
+        <!-- Left: Text Content -->
         <div class="hero-content animate-slide-left">
-          <h1 id="hero-heading">Mohamed&nbsp;M.&nbsp;El&nbsp;Esh</h1>
+          <h1 id="hero-heading">Mohamed M. El Esh</h1>
           <p class="tagline animate-slide-left animate-delay-100">Flutter Developer</p>
           <p class="intro-text animate-slide-left animate-delay-200">
-            Passionate about crafting high‑performance mobile experiences using
-            Flutter. I build responsive apps employing clean architecture and
-            modern design patterns.
+            Building <strong>production-ready Flutter apps</strong> with Clean Architecture, BLoC, and pixel-perfect UI. 
+            Specialized in <strong>Firebase integration</strong>, <strong>REST APIs</strong>, and creating 
+            <strong>high-performance mobile experiences</strong> that users love.
           </p>
+          <!-- Call-to-Action Buttons -->
           <div class="button-group animate-slide-left animate-delay-300" role="group" aria-label="Portfolio actions">
             <a href="#projects" class="btn primary-btn" role="button">View My Work</a>
-            <!-- Updated CV link to open external file in new tab and removed download attribute -->
-            <a href="https://drive.google.com/file/d/1Qpl8tsDznZSPtFf0ArIwL6CcYmpymY-5/view?usp=drive_link" class="btn secondary-btn" role="button" target="_blank" rel="noopener noreferrer">View CV</a>
+            <a href="https://drive.google.com/file/d/1Qpl8tsDznZSPtFf0ArIwL6CcYmpymY-5/view?usp=drive_link" 
+               class="btn secondary-btn" role="button" target="_blank" rel="noopener noreferrer">View CV</a>
           </div>
         </div>
-        <div class="hero-image animate-slide-right" aria-hidden="true">
-          <img src="images/hero.png" alt="Developer illustration" />
+        
+        <!-- Right: Image Showcase (Main + Side Images) -->
+        <div class="hero-image-container animate-slide-right" aria-hidden="true">
+          <div class="hero-images-wrapper">
+            <!-- Main Hero Image -->
+            <div class="hero-main-image">
+              <img src="images/hero.png" alt="Mohamed El Esh - Flutter Developer" loading="eager" />
+            </div>
+            <!-- Side Images Stack (one.png and two.png) -->
+            <div class="hero-side-stack">
+              <div class="hero-side-image hero-side-1">
+                <img src="images/one.png" alt="Project showcase one" loading="lazy" />
+              </div>
+              <div class="hero-side-image hero-side-2">
+                <img src="images/two.png" alt="Project showcase two" loading="lazy" />
+              </div>
+            </div>
+          </div>
         </div>
       </section>
-      <!-- About Section -->
+
+      <!-- ========================================
+           ABOUT SECTION
+           Purpose: Introduce yourself professionally
+           Features: Bio paragraphs and statistics cards (production apps, commits, etc)
+           ======================================== -->
       <section id="about" class="section about-section" aria-labelledby="about-heading">
         <h2 id="about-heading" class="animate-fade-in">About Me</h2>
         <div class="section-content">
+          <!-- Bio Paragraphs -->
           <p class="animate-fade-in animate-delay-100">
-            I’m <strong>Mohamed M. El Esh</strong>, a <strong>Flutter Developer</strong> with a strong background in
-            computer science and hands-on experience building high-performance, responsive mobile applications.
-            I’m passionate about crafting clean, scalable, and visually appealing apps that deliver exceptional user experiences.
+            I'm <strong>Mohamed M. El Esh</strong>, a passionate <strong>Flutter Developer</strong> from Egypt with a strong foundation in 
+            computer science and hands-on experience building <strong>8+ production-ready mobile applications</strong>. 
+            I specialize in crafting clean, scalable, and visually stunning apps that deliver exceptional user experiences.
           </p>
           <p class="animate-fade-in animate-delay-200">
-            I have developed multiple real-world Flutter projects integrating <strong>Firebase</strong>,
-            <strong>REST APIs</strong>, <strong>Authentication</strong>, and <strong>Animation techniques</strong>, following
-            <em>Clean Architecture</em> and <em>SOLID principles</em>.
-            My journey includes training programs with <strong>Microsoft</strong>, <strong>DEPI</strong>, and
-            <strong>Samsung</strong>, where I strengthened my technical and collaboration skills.
+            My expertise spans <strong>Clean Architecture</strong>, <strong>BLoC/Cubit state management</strong>, 
+            <strong>Firebase backend integration</strong>, <strong>RESTful APIs</strong>, and <strong>advanced animations</strong>. 
+            I've completed intensive training programs with <strong>Samsung</strong>, <strong>DEPI</strong>, <strong>Sprints</strong>, 
+            and <strong>Baianat</strong>, where I honed both my technical skills and collaborative abilities.
           </p>
           <p class="animate-fade-in animate-delay-300">
-            My goal is to continuously grow as a developer, contribute to impactful products, and turn ideas into
-            reliable, user-friendly mobile experiences that make a difference.
+            My mission is to continuously evolve as a developer, contribute to impactful products, and transform innovative ideas 
+            into reliable, user-friendly mobile experiences that make a real difference in people's lives.
           </p>
-        </div>
-      </section>
-
-      <!-- Education Section -->
-      <section id="education" class="section education-section" aria-labelledby="education-heading">
-        <h2 id="education-heading" class="animate-fade-in">Education</h2>
-        <div class="section-content">
-          <div class="timeline-item animate-scale animate-delay-100">
-            <span class="timeline-date">2021 – 2025</span>
-            <h3>Damietta University, Egypt</h3>
-            <p>Faculty of Computers and Artificial Intelligence</p>
-            <p>Department: Computer Science</p>
+          
+          <!-- Statistics Cards Grid -->
+          <div class="stats-grid animate-fade-in animate-delay-400">
+            <div class="stat-card">
+              <span class="stat-number">5+</span>
+              <span class="stat-label">Production Apps</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">300+</span>
+              <span class="stat-label">GitHub Commits</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">5</span>
+              <span class="stat-label">Certifications</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">1+</span>
+              <span class="stat-label">Years Experience</span>
+            </div>
           </div>
         </div>
       </section>
-      <!-- Experience Section -->
+
+      <!-- ========================================
+           EXPERIENCE SECTION (Work History)
+           Purpose: Showcase professional work experience
+           Features: Multiple experience items with roles, dates, and key achievements
+           ======================================== -->
       <section id="experience" class="section experience-section" aria-labelledby="experience-heading">
         <h2 id="experience-heading" class="animate-fade-in">Work Experience</h2>
         <div class="section-content experience-list" role="list">
-          <!-- Experience Item 2 -->
-          <article class="experience-item animate-scale animate-delay-200" role="listitem">
+          
+          <!-- Experience Item 1: Baianat -->
+          <article class="experience-item animate-scale animate-delay-100" role="listitem">
             <div class="exp-header">
-              <h3 id="exp-2-heading">Baianat Workshop — New Damietta, Egypt</h3>
+              <h3 id="exp-1-heading">Baianat Workshop — New Damietta, Egypt</h3>
               <span class="exp-role">Mobile Development Trainee</span>
               <span class="exp-date">Aug 2025 – Sep 2025</span>
             </div>
-            <ul class="exp-details" aria-labelledby="exp-2-heading">
-              <li>Developed mobile apps using Flutter with clean UI and responsive layouts.</li>
-              <li>Implemented state management using <code>Bloc</code> and <code>Cubit</code> for scalable architecture.</li>
-              <li>Integrated RESTful APIs and connected apps to Firebase backend services.</li>
-              <li>Enhanced UI/UX and implemented best practices for user-friendly mobile experience.</li>
-              <li>Hands-on project: built a functional app showcasing core mobile features, state management, and API integration.</li>
+            <ul class="exp-details" aria-labelledby="exp-1-heading">
+              <li>Developed mobile apps using Flutter with clean UI and responsive layouts</li>
+              <li>Implemented state management using <code>Bloc</code> and <code>Cubit</code> for scalable architecture</li>
+              <li>Integrated RESTful APIs and connected apps to Firebase backend services</li>
+              <li>Enhanced UI/UX and implemented best practices for user-friendly mobile experience</li>
+              <li>Hands-on project: built a functional app showcasing core mobile features, state management, and API integration</li>
             </ul>
           </article>
 
-          <!-- Experience Item 1 -->
-          <article class="experience-item animate-scale animate-delay-100" role="listitem">
+          <!-- Experience Item 2: Microsoft -->
+          <article class="experience-item animate-scale animate-delay-200" role="listitem">
             <div class="exp-header">
-              <h3 id="exp-1-heading">Sprints × Microsoft — Summer Camp (Remote)</h3>
+              <h3 id="exp-2-heading">Sprints × Microsoft — Summer Camp (Remote)</h3>
               <span class="exp-role">Mobile Development Trainee</span>
               <span class="exp-date">Jul 2025 – Sep 2025</span>
             </div>
-            <ul class="exp-details" aria-labelledby="exp-1-heading">
-              <li>Practiced stateless and stateful widgets, layouts, gestures and responsive design.</li>
-              <li>Managed app state using Provider to ensure scalable architecture.</li>
-              <li>Explored UI/UX concepts and managed model lifecycle with MLflow and Hugging Face.</li>
-              <li>Implemented bilingual (Arabic/English) support using <code>intl</code> and <code>.arb</code> files.</li>
-              <li>Final project: built a shopping app with authentication, product catalogue, cart and animations.</li>
+            <ul class="exp-details" aria-labelledby="exp-2-heading">
+              <li>Practiced stateless and stateful widgets, layouts, gestures and responsive design</li>
+              <li>Managed app state using Provider to ensure scalable architecture</li>
+              <li>Explored UI/UX concepts and best practices for mobile applications</li>
+              <li>Implemented bilingual (Arabic/English) support using <code>intl</code> and <code>.arb</code> files</li>
+              <li>Final project: built a shopping app with authentication, product catalogue, cart and animations</li>
             </ul>
           </article>
-          <!-- Experience Item 2 -->
-          <article class="experience-item animate-scale animate-delay-200" role="listitem">
+
+          <!-- Experience Item 3: DEPI -->
+          <article class="experience-item animate-scale animate-delay-300" role="listitem">
             <div class="exp-header">
-              <h3 id="exp-2-heading">Digital Egypt Pioneers Initiative – DEPI</h3>
+              <h3 id="exp-3-heading">Digital Egypt Pioneers Initiative – DEPI</h3>
               <span class="exp-role">Trainee</span>
               <span class="exp-date">Apr 2024 – Oct 2024</span>
             </div>
-            <ul class="exp-details" aria-labelledby="exp-2-heading">
-              <li>Built a solid foundation in AWS services and cloud architecture.</li>
-              <li>Trained and deployed machine‑learning models using Python and AWS.</li>
-              <li>Used MLflow and Hugging Face to manage the ML model lifecycle.</li>
-              <li>Developed NLP models for text classification and sentiment analysis.</li>
-              <li>Optimised prompts for language models to improve task completion rates.</li>
+            <ul class="exp-details" aria-labelledby="exp-3-heading">
+              <li>Built a solid foundation in AWS services and cloud architecture</li>
+              <li>Trained and deployed machine-learning models using Python and AWS</li>
+              <li>Used MLflow and Hugging Face to manage the ML model lifecycle</li>
+              <li>Developed NLP models for text classification and sentiment analysis</li>
+              <li>Optimised prompts for language models to improve task completion rates</li>
             </ul>
           </article>
-          <!-- Experience Item 3 -->
-          <article class="experience-item animate-scale animate-delay-300" role="listitem">
+
+          <!-- Experience Item 4: Samsung -->
+          <article class="experience-item animate-scale animate-delay-400" role="listitem">
             <div class="exp-header">
-              <h3 id="exp-3-heading">Samsung Innovation Campus – Cairo</h3>
+              <h3 id="exp-4-heading">Samsung Innovation Campus – Cairo</h3>
               <span class="exp-role">Intern</span>
               <span class="exp-date">Jun 2023 – Sep 2023</span>
             </div>
-            <ul class="exp-details" aria-labelledby="exp-3-heading">
-              <li>Strengthened programming fundamentals in Python.</li>
-              <li>Applied object‑oriented design principles for modular software.</li>
-              <li>Designed and implemented efficient algorithms.</li>
-              <li>Manipulated data using Pandas and NumPy.</li>
-              <li>Created GUI applications with Tkinter.</li>
+            <ul class="exp-details" aria-labelledby="exp-4-heading">
+              <li>Strengthened programming fundamentals in Python</li>
+              <li>Applied object-oriented design principles for modular software</li>
+              <li>Designed and implemented efficient algorithms</li>
+              <li>Manipulated data using Pandas and NumPy</li>
+              <li>Created GUI applications with Tkinter</li>
             </ul>
           </article>
         </div>
       </section>
-      <!-- Projects Section -->
+
+      <!-- ========================================
+           EDUCATION SECTION
+           Purpose: Display educational background
+           Features: University, degree, department, focus areas
+           ======================================== -->
+      <section id="education" class="section education-section" aria-labelledby="education-heading">
+        <h2 id="education-heading" class="animate-fade-in">Education</h2>
+        <div class="section-content">
+          <!-- Education Timeline Item -->
+          <div class="timeline-item animate-scale animate-delay-100">
+            <span class="timeline-date">2021 – 2025</span>
+            <h3>Damietta University, Egypt</h3>
+            <p><strong>Faculty of Computers and Artificial Intelligence</strong></p>
+            <p>Department: Computer Science</p>
+            <p>Focus: Software Engineering, Mobile Development, Algorithms &amp; Data Structures</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================
+           PROJECTS SECTION (Portfolio)
+           Purpose: Showcase completed projects with details
+           Features: Project images/videos, descriptions, tech stack, and action links
+           ======================================== -->
       <section id="projects" class="section projects-section" aria-labelledby="projects-heading">
-        <h2 id="projects-heading" class="animate-fade-in">Key Projects</h2>
+        <h2 id="projects-heading" class="animate-fade-in">Featured Projects</h2>
         <div class="section-content project-grid" role="list">
 
-
-
-
-
-
-                    <!-- Project 6 -->
-          <article class="project-item animate-scale animate-delay-600" role="listitem">
-            <div class="project-content">
-              <!-- <img src="images/projects/hungry.png" alt="Hungry App preview" class="project-image" /> -->
-
-              <h3 id="project-6-heading">Hungry App</h3>
-              <p aria-labelledby="project-6-heading">
-                Developed a multi screen Flutter food ordering app featuring search and category filters, meal customisation options,
-                a dynamic cart with real time price calculation and payment choices (cash on delivery and stored card) plus user profile.
-              </p>
-
-              <div class="project-buttons">
-                <!-- <a href="https://www.linkedin.com/posts/mohamed-m-el-esh-a97999283_flutter-foodapp-mobiledevelopment-activity-735xxxxxxx"
-                  target="_blank" rel="noopener noreferrer" class="project-btn">🔗 Under coding...</a>
-
-                <a href="https://your-demo-link.com"
-                  target="_blank" rel="noopener noreferrer" class="project-btn secondary-btn">▶️ Under coding...</a> -->
-
-                <a href="https://github.com/MohammedElEsh/hungry.git"
-                  target="_blank" rel="noopener noreferrer" class="project-btn github-btn">💻 Under coding...</a>
-              </div>
+          <!-- Project 1: Chat App -->
+          <article class="project-item animate-scale animate-delay-100" role="listitem">
+            <div class="project-image-wrapper">
+              <video src="demos/Chat App.mp4" muted loop playsinline preload="metadata" 
+                     onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;"
+                     aria-label="Chat Application demo video"></video>
             </div>
-          </article>
-
-
-
-
-
-          
-          <!-- Project 5 -->
-          <article class="project-item animate-scale animate-delay-500" role="listitem">
             <div class="project-content">
-              <!-- <img src="images/projects/chatapp.png" alt="Chat Application preview" class="project-image" /> -->
-
-              <h3 id="project-5-heading">Chat Application</h3>
-              <p aria-labelledby="project-5-heading">
-                Developed a cross-platform, production ready real time chat app with Firebase Authentication and Firestore messaging.
-                Integrated Supabase Storage for seamless image and voice sharing and Zego SDK for high quality voice and video calls with signaling.
-                Applied Clean Architecture and BLoC/Provider for scalable, maintainable state management.
+              <h3 id="project-1-heading">Real-Time Chat Application</h3>
+              <p aria-labelledby="project-1-heading">
+                Production-ready real-time chat app with Firebase Authentication and Firestore messaging. 
+                Integrated Supabase Storage for image/voice sharing and Zego SDK for HD voice/video calls. 
+                Built with Clean Architecture and BLoC/Provider for maintainable state management.
               </p>
-
+              <!-- Technology Stack Tags -->
+              <div class="tech-stack">
+                <span class="tech-badge">Flutter</span>
+                <span class="tech-badge">Firebase</span>
+                <span class="tech-badge">Supabase</span>
+                <span class="tech-badge">Zego SDK</span>
+                <span class="tech-badge">BLoC</span>
+                <span class="tech-badge">Clean Architecture</span>
+              </div>
+              <!-- Project Action Buttons -->
               <div class="project-buttons">
                 <a href="https://www.linkedin.com/posts/mohamed-m-el-esh-a97999283_flutter-firebase-cleanarchitecture-activity-7384565007084195840-lB7e"
-                  target="_blank" rel="noopener noreferrer" class="project-btn">🔗 View Post</a>
-
+                   target="_blank" rel="noopener noreferrer" class="project-btn primary">🔗 View Post</a>
                 <a href="https://drive.google.com/file/d/1OFD-Smw9cdW18V-OIiDqTGiICyYdJudj/view?usp=drive_link"
-                  target="_blank" rel="noopener noreferrer" class="project-btn secondary-btn">▶️ Live Demo</a>
-
+                   target="_blank" rel="noopener noreferrer" class="project-btn secondary-btn">▶️ Live Demo</a>
                 <a href="https://github.com/MohammedElEsh/chat_app.git"
-                  target="_blank" rel="noopener noreferrer" class="project-btn github-btn">💻 GitHub</a>
+                   target="_blank" rel="noopener noreferrer" class="project-btn github-btn">💻 GitHub</a>
               </div>
             </div>
           </article>
 
-
-
-
-
-          <!-- Project 2 -->
+          <!-- Project 2: QRoll Attendance -->
           <article class="project-item animate-scale animate-delay-200" role="listitem">
+            <div class="project-image-wrapper">
+              <video src="demos/Qroll App.mp4" muted loop playsinline preload="metadata"
+                     onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;"
+                     aria-label="QRoll Attendance App demo video"></video>
+            </div>
             <div class="project-content">
-              <!-- <img src="images/projects/qroll.png" alt="QRoll Attendance App preview" class="project-image" /> -->
-
-              <h3 id="project-2-heading">QRoll Attendance</h3>
+              <h3 id="project-2-heading">QRoll Attendance System</h3>
               <p aria-labelledby="project-2-heading">
-                Designed a role-based attendance app with QR code scanning, JWT authentication and real-time messaging.
-                Leveraged Riverpod for state management, encrypted local storage and REST APIs within a responsive, clean UI.
+                Role-based attendance app with QR code scanning, JWT authentication, and real-time messaging. 
+                Leveraged Riverpod for state management, encrypted local storage, and REST APIs within a 
+                responsive, clean UI optimized for educational institutions.
               </p>
-
+              <div class="tech-stack">
+                <span class="tech-badge">Flutter</span>
+                <span class="tech-badge">Riverpod</span>
+                <span class="tech-badge">JWT</span>
+                <span class="tech-badge">QR Scanner</span>
+                <span class="tech-badge">REST API</span>
+              </div>
               <div class="project-buttons">
                 <a href="https://www.linkedin.com/posts/mohamed-m-el-esh-a97999283_flutter-mobiledevelopment-edtech-activity-7349891273740226560-olXd"
-                  target="_blank" rel="noopener noreferrer" class="project-btn">🔗 View Post</a>
-
+                   target="_blank" rel="noopener noreferrer" class="project-btn primary">🔗 View Post</a>
                 <a href="https://drive.google.com/file/d/1nXgLyhCeVJK4yZL4nVdqFSwl0jUlrhiu/view?usp=drive_link"
-                  target="_blank" rel="noopener noreferrer" class="project-btn secondary-btn">▶️ Live Demo</a>
-
+                   target="_blank" rel="noopener noreferrer" class="project-btn secondary-btn">▶️ Live Demo</a>
                 <a href="https://github.com/MohammedElEsh/qroll_attendance.git"
-                  target="_blank" rel="noopener noreferrer" class="project-btn github-btn">💻 GitHub</a>
+                   target="_blank" rel="noopener noreferrer" class="project-btn github-btn">💻 GitHub</a>
               </div>
             </div>
           </article>
 
-
-
-
-
-
-
-                    <!-- Project 1 -->
-          <article class="project-item animate-scale animate-delay-100" role="listitem">
+          <!-- Project 3: Al Baker -->
+          <article class="project-item animate-scale animate-delay-300" role="listitem">
+            <div class="project-image-wrapper">
+              <video src="demos/AlBakr App.mp4" muted loop playsinline preload="metadata"
+                     onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;"
+                     aria-label="Al Baker Air Conditioning App demo video"></video>
+            </div>
             <div class="project-content">
-              <!-- <img src="images/projects/albaker.png" alt="Al Baker Air Conditioning App preview" class="project-image" /> -->
-              <h3 id="project-1-heading">Al Baker Air Conditioning</h3>
-              <p aria-labelledby="project-1-heading">
-                Built an e-commerce and services application with Arabic user interface, JWT authentication and RESTful API integration using Dio.
-                Features include a product catalogue, cart, payment processing and service scheduling enhanced with Lottie animations.
+              <h3 id="project-3-heading">Al Baker Air Conditioning</h3>
+              <p aria-labelledby="project-3-heading">
+                E-commerce and services application with Arabic UI, JWT authentication, and RESTful API integration using Dio. 
+                Features include product catalogue, shopping cart, payment processing, service scheduling, and 
+                engaging Lottie animations for enhanced user experience.
               </p>
-
+              <div class="tech-stack">
+                <span class="tech-badge">Flutter</span>
+                <span class="tech-badge">Dio</span>
+                <span class="tech-badge">JWT</span>
+                <span class="tech-badge">Lottie</span>
+                <span class="tech-badge">Arabic UI</span>
+              </div>
               <div class="project-buttons">
                 <a href="https://www.linkedin.com/posts/mohamed-m-el-esh-a97999283_flutter-firstflutterapp-mobileapp-activity-7350547425742192640-Jkzy"
-                  target="_blank" rel="noopener noreferrer" class="project-btn">🔗 View Post</a>
-
+                   target="_blank" rel="noopener noreferrer" class="project-btn primary">🔗 View Post</a>
                 <a href="https://drive.google.com/file/d/1or8m9CiCcXzH7DK8wEbKT2hEoLtZTtuZ/view?usp=drive_link"
-                  target="_blank" rel="noopener noreferrer" class="project-btn secondary-btn">▶️ Live Demo</a>
-
+                   target="_blank" rel="noopener noreferrer" class="project-btn secondary-btn">▶️ Live Demo</a>
                 <a href="https://github.com/MohammedElEsh/albaker_air_conditioning.git"
-                  target="_blank" rel="noopener noreferrer" class="project-btn github-btn">💻 GitHub</a>
+                   target="_blank" rel="noopener noreferrer" class="project-btn github-btn">💻 GitHub</a>
               </div>
             </div>
           </article>
 
-
-
-
-
-
-          <!-- Project 3 -->
-          <!-- <article class="project-item animate-scale animate-delay-300" role="listitem">
-            <h3 id="project-3-heading">Flutter Shopping App</h3>
-            <p aria-labelledby="project-3-heading">
-              Developed a shopping app featuring validated sign‑up/sign‑in forms,
-              animated navigation and PageView/GridView product views. Added
-              cart snackbars and implemented full Arabic localisation using
-              <code>intl</code> while managing state with Provider.
-            </p>
-          </article> -->
-          <!-- Project 4 -->
-          <!-- <article class="project-item animate-scale animate-delay-400" role="listitem">
-            <h3 id="project-4-heading">WhatsApp‑Style Messaging UI</h3>
-            <p aria-labelledby="project-4-heading">
-              Created a pixel‑perfect messaging interface mimicking WhatsApp.
-              Included home, chat and story screens with light/dark themes,
-              adaptive layouts and micro‑animations for chat, feedback and story
-              transitions. State management powered by Provider.
-            </p>
-          </article> -->
+          <!-- Project 4: Hungry App (In Progress) -->
+          <article class="project-item animate-scale animate-delay-400" role="listitem">
+            <div class="project-image-wrapper">
+              <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #02569B 0%, #13B9FD 100%); color: white; font-size: 1.5rem; font-weight: 700;">
+                🍔 In Development
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 id="project-4-heading">Hungry Food Ordering App</h3>
+              <p aria-labelledby="project-4-heading">
+                Multi-screen Flutter food ordering app featuring advanced search and category filters, 
+                meal customization options, dynamic cart with real-time price calculation, multiple payment methods 
+                (cash on delivery and stored card), and comprehensive user profile management.
+              </p>
+              <div class="tech-stack">
+                <span class="tech-badge">Flutter</span>
+                <span class="tech-badge">BLoC</span>
+                <span class="tech-badge">Firebase</span>
+                <span class="tech-badge">Payment Integration</span>
+              </div>
+              <div class="project-buttons">
+                <a href="https://github.com/MohammedElEsh/hungry.git"
+                   target="_blank" rel="noopener noreferrer" class="project-btn github-btn">💻 Under Development</a>
+              </div>
+            </div>
+          </article>
 
         </div>
       </section>
-      <!-- Skills Section -->
+
+      <!-- ========================================
+           SKILLS SECTION
+           Purpose: Showcase technical expertise by category
+           Features: Multiple skill categories with organized lists
+           ======================================== -->
       <section id="skills" class="section skills-section" aria-labelledby="skills-heading">
-        <h2 id="skills-heading" class="animate-fade-in">Technical Skills</h2>
+        <h2 id="skills-heading" class="animate-fade-in">Flutter & Mobile Development Skills</h2>
         <div class="section-content skills-grid animate-fade-in animate-delay-100" role="list">
+          
+          <!-- Skill Category 1: Flutter Core -->
           <div class="skill-category" role="listitem">
-            <h3 id="skill-languages">Languages</h3>
-            <ul aria-labelledby="skill-languages">
-              <li>C#</li>
-              <li>Python</li>
-              <li>Dart</li>
+            <h3 id="skill-flutter">🎯 Flutter Core</h3>
+            <ul aria-labelledby="skill-flutter">
+              <li>Flutter Framework</li>
+              <li>Dart Programming</li>
+              <li>Widget Development</li>
+              <li>Responsive Design</li>
+              <li>Material & Cupertino</li>
             </ul>
           </div>
+
+          <!-- Skill Category 2: State Management -->
           <div class="skill-category" role="listitem">
-            <h3 id="skill-backend">Back‑End</h3>
+            <h3 id="skill-state">⚡ State Management</h3>
+            <ul aria-labelledby="skill-state">
+              <li>BLoC / Cubit</li>
+              <!-- <li>Provider</li>
+              <li>Riverpod</li>
+              <li>GetX (familiar)</li> -->
+            </ul>
+          </div>
+
+          <!-- Skill Category 3: Architecture -->
+          <div class="skill-category" role="listitem">
+            <h3 id="skill-architecture">🏗️ Architecture</h3>
+            <ul aria-labelledby="skill-architecture">
+              <li>Clean Architecture</li>
+              <li>SOLID Principles</li>
+              <li>Design Patterns</li>
+              <li>Dependency Injection</li>
+            </ul>
+          </div>
+
+          <!-- Skill Category 4: Backend Integration -->
+          <div class="skill-category" role="listitem">
+            <h3 id="skill-backend">🔥 Backend Integration</h3>
             <ul aria-labelledby="skill-backend">
-              <li>ASP.NET Core (learning)</li>
-            </ul>
-          </div>
-          <div class="skill-category" role="listitem">
-            <h3 id="skill-databases">Databases &amp; Storage</h3>
-            <ul aria-labelledby="skill-databases">
-              <li>MySQL</li>
-              <li>Firebase</li>
-              <li>JSON</li>
-            </ul>
-          </div>
-          <div class="skill-category" role="listitem">
-            <h3 id="skill-apis">APIs &amp; Networking</h3>
-            <ul aria-labelledby="skill-apis">
+              <li>Firebase (Auth, Firestore, Storage)</li>
+              <li>Supabase</li>
               <li>RESTful APIs</li>
-              <li>Dio</li>
+              <li>Dio & HTTP</li>
+              <li>JWT Authentication</li>
             </ul>
           </div>
+
+          <!-- Skill Category 5: Local Storage -->
           <div class="skill-category" role="listitem">
-            <h3 id="skill-mobile">Mobile Development</h3>
-            <ul aria-labelledby="skill-mobile">
-              <li>Flutter</li>
-              <li>Clean Architecture,</li>
-              <li>UI/UX Implementation</li>
-              <li>State Management (<code>Bloc</code>)</li>
+            <h3 id="skill-database">💾 Local Storage</h3>
+            <ul aria-labelledby="skill-database">
+              <li>Hive</li>
+              <li>Shared Preferences</li>
+              <!-- <li>SQLite</li>
+              <li>Secure Storage</li> -->
             </ul>
           </div>
+
+          <!-- Skill Category 6: UI/UX Design -->
           <div class="skill-category" role="listitem">
-            <h3 id="skill-cloud">Cloud</h3>
+            <h3 id="skill-ui">🎨 UI/UX</h3>
+            <ul aria-labelledby="skill-ui">
+              <li>Custom Animations</li>
+              <li>Lottie Animations</li>
+              <li>Custom Painters</li>
+              <li>Responsive Layouts</li>
+              <li>Theme Management</li>
+            </ul>
+          </div>
+
+          <!-- Skill Category 7: Development Tools -->
+          <div class="skill-category" role="listitem">
+            <h3 id="skill-tools">🛠️ Development Tools</h3>
+            <ul aria-labelledby="skill-tools">
+              <li>Git & GitHub</li>
+              <li>VS Code</li>
+              <li>Claude Code</li>
+              <li>Android Studio</li>
+              <li>Postman</li>
+              <li>Jira</li>
+            </ul>
+          </div>
+
+          <!-- Skill Category 8: Programming Languages -->
+          <div class="skill-category" role="listitem">
+            <h3 id="skill-languages">💻 Programming Languages</h3>
+            <ul aria-labelledby="skill-languages">
+              <li>Python (Expert)</li>
+              <li>Dart (Expert)</li>
+              <li>JavaScript (Basic)</li>
+              <li>C# (Basic)</li>
+            </ul>
+          </div>
+
+          <!-- Skill Category 9: Cloud & DevOps -->
+          <div class="skill-category" role="listitem">
+            <h3 id="skill-cloud">☁️ Cloud & DevOps</h3>
             <ul aria-labelledby="skill-cloud">
               <li>AWS EC2</li>
               <li>AWS S3</li>
               <li>AWS Lambda</li>
+              <li>CI/CD (learning)</li>
             </ul>
           </div>
+
+          <!-- Skill Category 10: Other Skills -->
           <div class="skill-category" role="listitem">
-            <h3 id="skill-version">Version Control</h3>
-            <ul aria-labelledby="skill-version">
-              <li>Git</li>
-              <li>GitHub</li>
+            <h3 id="skill-other">📦 Other Skills</h3>
+            <ul aria-labelledby="skill-other">
+              <li>QR Code Integration</li>
+              <li>Video/Voice Calls (Zego)</li>
+              <li>Localization (i18n)</li>
+              <li>Push Notifications</li>
             </ul>
           </div>
-          <div class="skill-category" role="listitem">
-            <h3 id="skill-tools">Tools</h3>
-            <ul aria-labelledby="skill-tools">
-              <li>Jira</li>
-            </ul>
-          </div>
+
         </div>
       </section>
-      <!-- Contact Section -->
+
+      <!-- ========================================
+           CERTIFICATES SECTION
+           Purpose: Display certifications and training courses completed
+           Features: Certificate cards with images and course details
+           ======================================== -->
+      <section id="certificates" class="section certificates-section" aria-labelledby="certificates-heading">
+        <h2 id="certificates-heading" class="animate-fade-in">Certificates</h2>
+        <div class="section-content certificates-grid" role="list">
+          
+
+          
+          <!-- Certificate 2: Baianat -->
+          <a href="https://drive.google.com/file/d/1CpmrEPZud6dA9R6dSTolA88J6DCzCPZD/view?usp=drive_link" target="_blank" class="certificate-link">
+            <article class="certificate-card animate-scale animate-delay-200" role="listitem">
+              <div class="certificate-header">
+                <span class="certificate-badge badge-flutter">Flutter</span>
+              </div>
+              <div class="certificate-image">
+                <img src="certificates/bianat_certificate.png" 
+                    alt="Baianat Workshop Certificate" 
+                    loading="lazy" />
+              </div>
+              <div class="certificate-info">
+                <h3>Baianat Workshop</h3>
+                <p class="certificate-category">Mobile Development</p>
+                <p class="certificate-date">📅 Aug - Sep 2025</p>
+                <p class="certificate-duration">⏱️ 2 months</p>
+              </div>
+            </article>
+          </a>
+
+
+          <!-- Certificate 1: Microsoft -->
+          <a href="https://drive.google.com/file/d/10cQk9Rjji0rDxZ8KaJ2veN4IajO0BkB7/view?usp=drive_link" target="_blank" class="certificate-link">
+            <article class="certificate-card animate-scale animate-delay-100" role="listitem">
+              <div class="certificate-header">
+                <span class="certificate-badge badge-microsoft">Flutter</span>
+              </div>
+              <div class="certificate-image">
+                <img src="certificates/Sprints x Microsoft Summer Camp_certificate.jpg" 
+                    alt="Sprints × Microsoft Summer Camp Certificate" 
+                    loading="lazy" />
+              </div>
+              <div class="certificate-info">
+                <h3>Sprints × Microsoft Summer Camp</h3>
+                <p class="certificate-category">Mobile Development</p>
+                <p class="certificate-date">📅 Jul - Sep 2025</p>
+                <p class="certificate-duration">⏱️ 3 months</p>
+              </div>
+            </article>
+          </a>
+
+          <!-- Certificate 3: DEPI -->
+          <a href="https://drive.google.com/file/d/1xEsxes15wDTPwblQgswlw__c-CVVDGe0/view?usp=drive_link" target="_blank" class="certificate-link">
+            <article class="certificate-card animate-scale animate-delay-300" role="listitem">
+              <div class="certificate-header">
+                <span class="certificate-badge badge-depi">AWS machine-learning</span>
+              </div>
+              <div class="certificate-image">
+                <img src="certificates/Digital Egypt Pioneers Program_certificate.jpg" 
+                    alt="Digital Egypt Pioneers Initiative Certificate" 
+                    loading="lazy" />
+              </div>
+              <div class="certificate-info">
+                <h3>Digital Egypt Pioneers Initiative (DEPI)</h3>
+                <p class="certificate-category">Cloud Computing & AI</p>
+                <p class="certificate-date">📅 Apr - Oct 2024</p>
+                <p class="certificate-duration">⏱️ 6 months</p>
+              </div>
+            </article>
+          </a>
+
+
+          <!-- Certificate 5: Berlitz English -->
+          <a href="https://drive.google.com/file/d/1Y89zgkY2fKrkboiyvzvFxuR1GY_UvaKw/view?usp=drive_link" target="_blank" class="certificate-link">
+            <article class="certificate-card animate-scale animate-delay-500" role="listitem">
+              <div class="certificate-header">
+                <span class="certificate-badge badge-languages">English</span>
+              </div>
+              <div class="certificate-image">
+                <img src="certificates/Berlitz Business English_certificate.jpg" 
+                    alt="Berlitz Business English Certificate" 
+                    loading="lazy" />
+              </div>
+              <div class="certificate-info">
+                <h3>Berlitz Business English</h3>
+                <p class="certificate-category">Professional Communication</p>
+                <p class="certificate-date">📅 2024 - Present</p>
+                <p class="certificate-duration">⏱️ Ongoing</p>
+              </div>
+            </article>
+          </a>
+
+
+          
+          <!-- Certificate 4: Samsung -->
+          <a href="https://drive.google.com/file/d/1_l9eaa7YxDQ6lUBGTAVpqQg5tMe9f_1m/view?usp=drive_link" target="_blank" class="certificate-link">
+            <!-- Certificate 4: Samsung -->
+            <article class="certificate-card animate-scale animate-delay-400" role="listitem">
+              <div class="certificate-header">
+                <span class="certificate-badge badge-samsung">Python</span>
+              </div>
+
+              <div class="certificate-image">
+                <img src="certificates/Samsung Innovation Campus_certificate.jpg" 
+                    alt="Samsung Innovation Campus Certificate" 
+                    loading="lazy" />
+              </div>
+
+              <div class="certificate-info">
+                <h3>Samsung Innovation Campus</h3>
+                <p class="certificate-category">Python</p>
+                <p class="certificate-date">📅 Jun - Sep 2023</p>
+                <p class="certificate-duration">⏱️ 4 months</p>
+              </div>
+            </article>
+          </a>
+
+
+        </div>
+      </section>
+
+      <!-- ========================================
+           CONTACT SECTION (Call to Action)
+           Purpose: Provide contact information with modern design
+           Features: CTA heading, contact cards with icons/animations, social links
+           ======================================== -->
       <section id="contact" class="section contact-section" aria-labelledby="contact-heading">
-        <h2 id="contact-heading" class="animate-fade-in">Contact</h2>
-        <div class="section-content contact-content animate-fade-in animate-delay-100">
-          <p>If you'd like to get in touch, feel free to reach out via:</p>
-          <ul class="contact-list" role="list">
-            <li role="listitem" class="animate-scale animate-delay-200">
-              <strong>Phone:</strong>
-              <a href="tel:+201065657237" class="hover-highlight">+20&nbsp;106&nbsp;565&nbsp;7237</a>
-            </li>
-            <li role="listitem" class="animate-scale animate-delay-300">
-              <strong>Email:</strong>
-              <a href="mailto:mohamedelesh34@gmail.com" class="hover-highlight">mohamedelesh34@gmail.com</a>
-            </li>
-            <li role="listitem" class="animate-scale animate-delay-400">
-              <strong>LinkedIn:</strong>
-              <a href="https://www.linkedin.com/in/mohamed-m-el-esh-a97999283/" aria-label="LinkedIn profile" class="hover-highlight">LinkedIn Profile</a>
-            </li>
-            <li role="listitem" class="animate-scale animate-delay-500">
-              <strong>GitHub:</strong>
-              <a href="https://github.com/MohammedElEsh" aria-label="GitHub profile" class="hover-highlight">GitHub Profile</a>
-            </li>
-            <li role="listitem" class="animate-scale animate-delay-600">
-              <strong>Portfolio:</strong>
-              <a href="#home" aria-label="Portfolio home" class="hover-highlight">This Website</a>
-            </li>
-          </ul>
+        <div class="contact-container">
+          <!-- Main Heading & Subheading -->
+          <div class="contact-header animate-fade-in">
+            <h2 id="contact-heading" class="contact-title">Let's Connect</h2>
+            <p class="contact-subtitle">Have a project in mind? I'd love to hear from you. Let's collaborate and build exceptional mobile experiences together.</p>
+          </div>
+
+          <!-- Contact Cards Grid -->
+          <div class="section-content contact-grid animate-fade-in animate-delay-100" role="list">
+            
+            <!-- Contact Card 1: Email -->
+            <article class="contact-card animate-scale animate-delay-200" role="listitem">
+              <div class="contact-card-icon email-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
+                  <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                </svg>
+              </div>
+              <div class="contact-card-content">
+                <h3>Email Me</h3>
+                <p class="contact-label">I usually respond within 24 hours</p>
+                <a href="mailto:mohamedelesh34@gmail.com" class="contact-link">mohamedelesh34@gmail.com</a>
+              </div>
+              <div class="contact-card-arrow">→</div>
+            </article>
+
+            
+            <!-- Contact Card 4: GitHub -->
+            <article class="contact-card animate-scale animate-delay-500" role="listitem">
+              <div class="contact-card-icon github-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
+                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+              </div>
+              <div class="contact-card-content">
+                <h3>GitHub</h3>
+                <p class="contact-label">Check out my latest projects</p>
+                <a href="https://github.com/MohammedElEsh" target="_blank" rel="noopener noreferrer" class="contact-link">View Code</a>
+              </div>
+              <div class="contact-card-arrow">→</div>
+            </article>
+
+
+            <!-- Contact Card 3: LinkedIn -->
+            <article class="contact-card animate-scale animate-delay-400" role="listitem">
+              <div class="contact-card-icon linkedin-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
+                  <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.39v-1.2h-2.84v8.37h2.84v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.84M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                </svg>
+              </div>
+              <div class="contact-card-content">
+                <h3>LinkedIn</h3>
+                <p class="contact-label">Connect and follow my journey</p>
+                <a href="https://www.linkedin.com/in/mohamed-m-el-esh-a97999283/" target="_blank" rel="noopener noreferrer" class="contact-link">View Profile</a>
+              </div>
+              <div class="contact-card-arrow">→</div>
+            </article>
+
+            
+            <!-- Contact Card 2: Phone -->
+            <article class="contact-card animate-scale animate-delay-300" role="listitem">
+              <div class="contact-card-icon phone-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
+                  <path d="M17.707 12.293l-5.293-5.293a1 1 0 0 0-1.414 0l-5.293 5.293a1 1 0 1 0 1.414 1.414L11 9.414V20a1 1 0 0 0 2 0V9.414l3.293 3.293a1 1 0 0 0 1.414-1.414zM6 4h12a1 1 0 0 0 0-2H6a1 1 0 0 0 0 2z"/>
+                </svg>
+              </div>
+              <div class="contact-card-content">
+                <h3>Call Me</h3>
+                <p class="contact-label">Available for meetings and calls</p>
+                <a href="tel:+201065657237" class="contact-link">+20 106 565 7237</a>
+              </div>
+              <div class="contact-card-arrow">→</div>
+            </article>
+
+
+          </div>
+
+          <!-- CTA Section -->
+          <div class="contact-cta animate-fade-in animate-delay-300">
+            <p class="cta-text">💡 If you’re working on a project,
+               exploring a new idea, or looking for a Flutter developer to collaborate with,
+                I’d love to be part of it. I’m always open to meaningful conversations.</p>
+            <!-- <a href="mailto:mohamedelesh34@gmail.com" class="cta-button primary-btn">Start a Conversation</a> -->
+          </div>
         </div>
       </section>
     </main>
-    <!-- Footer -->
+
+    <!-- ========================================
+         FOOTER
+         Copyright and site information
+         ======================================== -->
     <footer class="footer" role="contentinfo">
-      <p>&copy; <span id="year"></span> Mohamed&nbsp;M.&nbsp;El&nbsp;Esh. All rights reserved.</p>
+      <p>&copy; <span id="year"></span> Mohamed M. El Esh. All rights reserved.</p>
     </footer>
+
+    <!-- ========================================
+         JAVASCRIPT
+         External script file for interactivity:
+         - Smooth scroll behavior
+         - Theme toggle (dark/light mode)
+         - Mobile menu toggle
+         - Animation triggers
+         ======================================== -->
     <script src="script.js"></script>
   </body>
 </html>
+

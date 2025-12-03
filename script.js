@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     navLinks.classList.toggle('open');
   });
 
-  // Close the menu when a link is clicked (for single page navigation)
+  // Close the mobile menu when a link is clicked (for single page navigation)
   navLinks.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
       if (navLinks.classList.contains('open')) {
@@ -42,17 +42,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Theme toggle functionality
   if (themeToggle) {
-    // Check for saved theme preference or respect OS preference
-    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    // Check for a saved theme preference; default to light if none is stored
     const savedTheme = localStorage.getItem('theme');
-    
-    // Apply saved theme or OS preference
-    if (savedTheme === 'dark' || (!savedTheme && prefersDarkScheme.matches)) {
-      document.documentElement.setAttribute('data-theme', 'dark');
-      themeToggle.setAttribute('aria-checked', 'true');
-    } else {
+
+    // Always default to the dark theme when no preference is stored
+    // If a saved preference exists for light, apply it; otherwise use dark
+    if (savedTheme === 'light') {
       document.documentElement.setAttribute('data-theme', 'light');
       themeToggle.setAttribute('aria-checked', 'false');
+    } else {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      themeToggle.setAttribute('aria-checked', 'true');
     }
 
     // Toggle theme when button is clicked
@@ -81,31 +81,26 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
   
-  // Scroll reveal animations
-  function isInViewport(element) {
-    const rect = element.getBoundingClientRect();
-    return (
-      rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.9 &&
-      rect.bottom >= 0
-    );
-  }
+  // IntersectionObserver for scroll animations
+  const observerOptions = {
+    threshold: 0.15
+  };
 
-  // Function to handle scroll animations
-  function handleScrollAnimations() {
-    const animatedElements = document.querySelectorAll(
-      '.animate-fade-in, .animate-slide-left, .animate-slide-right, .animate-scale'
-    );
-    
-    animatedElements.forEach(element => {
-      if (isInViewport(element) && !element.classList.contains('animated')) {
-        element.classList.add('animated');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animated');
+      } else {
+        entry.target.classList.remove('animated');
       }
     });
-  }
+  }, observerOptions);
 
-  // Initial check for elements in viewport
-  handleScrollAnimations();
+  const animationTargets = document.querySelectorAll(
+    '.animate-fade-in, .animate-slide-left, .animate-slide-right, .animate-scale, .animate-slide-up, .animate-zoom-in'
+  );
 
-  // Add scroll event listener
-  window.addEventListener('scroll', handleScrollAnimations, { passive: true });
+  animationTargets.forEach(el => {
+    observer.observe(el);
+  });
 });
