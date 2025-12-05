@@ -6,6 +6,25 @@ document.addEventListener('DOMContentLoaded', () => {
   const navLinks = document.querySelector('.nav-links');
   const yearSpan = document.getElementById('year');
   const themeToggle = document.getElementById('theme-toggle');
+  const scrollToTopBtn = document.getElementById('scroll-to-top');
+
+  // Scroll to Top Logic
+  if (scrollToTopBtn) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        scrollToTopBtn.classList.add('visible');
+      } else {
+        scrollToTopBtn.classList.remove('visible');
+      }
+    });
+
+    scrollToTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
 
   // Set current year in footer
   if (yearSpan) {
@@ -103,4 +122,16 @@ document.addEventListener('DOMContentLoaded', () => {
   animationTargets.forEach(el => {
     observer.observe(el);
   });
+  // Register Service Worker
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('sw.js')
+        .then(registration => {
+          console.log('ServiceWorker registration successful');
+        })
+        .catch(err => {
+          console.log('ServiceWorker registration failed: ', err);
+        });
+    });
+  }
 });

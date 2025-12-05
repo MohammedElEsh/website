@@ -9,47 +9,78 @@
     
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#02569B" />
     
     <!-- ===== PRIMARY META TAGS (SEO & Description) ===== -->
-    <title>Mohamed M. El Esh – Flutter Developer | Mobile App Development Expert</title>
-    <meta name="title" content="Mohamed M. El Esh – Flutter Developer | Mobile App Development Expert" />
-    <meta name="description" content="Flutter Developer with 8+ production apps | Expert in Clean Architecture, BLoC, Firebase & REST APIs | Building high-performance mobile experiences | Available for hire" />
-    <meta name="keywords" content="Flutter Developer, Mobile App Development, Dart, Flutter Expert, Clean Architecture, BLoC, Firebase, REST APIs, Mohamed El Esh, Egypt, Hire Flutter Developer, Mobile Developer Portfolio" />
+    <title>Mohamed M. El Esh – Flutter Developer | Mobile App Expert</title>
+    <meta name="title" content="Mohamed M. El Esh – Flutter Developer | Mobile App Expert" />
+    <meta name="description" content="Senior Flutter Developer specializing in Clean Architecture, BLoC, and high-performance mobile apps. View my portfolio of 8+ production applications." />
+    <meta name="keywords" content="Flutter Developer, Mobile App Development, Dart, Clean Architecture, BLoC, Firebase, Mohamed El Esh, Portfolio, Egypt, Remote Developer" />
     <meta name="author" content="Mohamed M. El Esh" />
     <meta name="robots" content="index, follow" />
     
-    <!-- ===== CANONICAL URL (Prevent duplicate content in search engines) ===== -->
+    <!-- ===== CANONICAL URL ===== -->
     <link rel="canonical" href="https://mohamedelesh.com/" />
     
-    <!-- ===== OPEN GRAPH TAGS (Social Media Preview) ===== -->
+    <!-- ===== OPEN GRAPH / FACEBOOK (Social Media Preview) ===== -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://mohamedelesh.com/" />
     <meta property="og:title" content="Mohamed M. El Esh – Flutter Developer | Mobile App Expert" />
-    <meta property="og:description" content="Flutter Developer specializing in Clean Architecture, BLoC, and high-performance mobile apps. 8+ production apps built with Firebase & REST APIs." />
-    <meta property="og:image" content="https://mohamedelesh.com/images/og-preview.png" />
+    <meta property="og:description" content="Senior Flutter Developer specializing in Clean Architecture, BLoC, and high-performance mobile apps. View my portfolio of 8+ production applications." />
+    <meta property="og:image" content="https://mohamedelesh.com/images/favicon.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="Mohamed M. El Esh Portfolio" />
+    <meta property="og:locale" content="en_US" />
     
-    <!-- ===== TWITTER CARD TAGS (Twitter Social Preview) ===== -->
+    <!-- ===== TWITTER CARD (Twitter Social Preview) ===== -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://mohamedelesh.com/" />
-    <meta property="twitter:title" content="Mohamed M. El Esh – Flutter Developer" />
-    <meta property="twitter:description" content="Flutter Developer | Clean Architecture Expert | 8+ Production Apps" />
-    <meta property="twitter:image" content="https://mohamedelesh.com/images/og-preview.png" />
+    <meta property="twitter:title" content="Mohamed M. El Esh – Flutter Developer | Mobile App Expert" />
+    <meta property="twitter:description" content="Senior Flutter Developer specializing in Clean Architecture, BLoC, and high-performance mobile apps. View my portfolio of 8+ production applications." />
+    <meta property="twitter:image" content="https://mohamedelesh.com/images/favicon.png" />
     
     <!-- ===== FAVICON (Browser Tab Icon) ===== -->
     <link rel="icon" type="image/png" href="images/favicon.png" />
     <link rel="apple-touch-icon" href="images/favicon.png" />
     
-    <!-- ===== PRECONNECT TO EXTERNAL RESOURCES (Performance Optimization) ===== -->
+    <!-- ===== PRECONNECT TO EXTERNAL RESOURCES ===== -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     
     <!-- ===== GOOGLE FONTS IMPORT (Inter Font Family) ===== -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     
+    <!-- ===== MANIFEST (PWA Support) ===== -->
+    <link rel="manifest" href="manifest.json" />
+
     <!-- ===== MAIN STYLESHEET ===== -->
     <link rel="stylesheet" href="style.css" />
+
+    <!-- ===== STRUCTURED DATA (JSON-LD) ===== -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Mohamed M. El Esh",
+      "url": "https://mohamedelesh.com",
+      "image": "https://mohamedelesh.com/images/hero.png",
+      "jobTitle": "Flutter Developer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Freelance"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/mohamed-m-el-esh-a97999283/",
+        "https://github.com/MohammedElEsh"
+      ],
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Damietta University"
+      },
+      "knowsAbout": ["Flutter", "Dart", "Mobile App Development", "Firebase", "Clean Architecture"]
+    }
+    </script>
   </head>
   <body>
     <!-- ========================================
@@ -792,6 +823,13 @@
          - Mobile menu toggle
          - Animation triggers
          ======================================== -->
+    <!-- ===== SCROLL TO TOP BUTTON ===== -->
+    <button id="scroll-to-top" class="scroll-to-top" aria-label="Scroll to top">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+        <path d="M12 4l-8 8h6v8h4v-8h6z"/>
+      </svg>
+    </button>
+
     <script src="script.js"></script>
   </body>
 </html>
