@@ -214,15 +214,15 @@
           <!-- Statistics Cards Grid -->
           <div class="stats-grid animate-fade-in animate-delay-400">
             <div class="stat-card">
-              <span class="stat-number">5+</span>
+              <span class="stat-number">6+</span>
               <span class="stat-label">Production Apps</span>
             </div>
             <div class="stat-card">
-              <span class="stat-number">300+</span>
+              <span class="stat-number">450+</span>
               <span class="stat-label">GitHub Commits</span>
             </div>
             <div class="stat-card">
-              <span class="stat-number">5</span>
+              <span class="stat-number">6</span>
               <span class="stat-label">Certifications</span>
             </div>
             <div class="stat-card">
@@ -241,6 +241,25 @@
       <section id="experience" class="section experience-section" aria-labelledby="experience-heading">
         <h2 id="experience-heading" class="animate-fade-in">Work Experience</h2>
         <div class="section-content experience-list" role="list">
+
+
+
+          <article class="experience-item animate-scale animate-delay-500" role="listitem">
+            <div class="exp-header">
+              <h3 id="exp-5-heading">Cumulocode Software — Tabuk, Saudi Arabia</h3>
+              <span class="exp-role">Flutter Mobile Developer</span>
+              <span class="exp-date">Oct 2025 – Feb 2026</span>
+            </div>
+
+            <ul class="exp-details" aria-labelledby="exp-5-heading">
+              <li>Developed a production-ready Expense Tracker mobile application for personal and business use</li>
+              <li>Implemented Clean Architecture with <code>BLoC & Cubit</code> for scalable and maintainable state management</li>
+              <li>Built offline-first data persistence using <code>Hive</code> local database</li>
+              <li>Integrated REST APIs using <code>Dio</code> for data synchronization</li>
+              <li>Added Arabic language support with full <code>RTL</code> layout and multi-currency handling</li>
+              <li>Developed advanced analytics, budgets, recurring expenses, and business management features</li>
+            </ul>
+          </article>
           
           <!-- Experience Item 1: Baianat -->
           <article class="experience-item animate-scale animate-delay-100" role="listitem">
@@ -336,6 +355,76 @@
         <h2 id="projects-heading" class="animate-fade-in">Featured Projects</h2>
         <div class="section-content project-grid" role="list">
 
+
+          <!-- ================= Money Expenses Tracker ================= -->
+          <article class="project-item animate-scale animate-delay-100" role="listitem">
+
+            <!-- Project Media -->
+            <div class="project-image-wrapper">
+              <video src="demos/Money Expences Tracker.mp4"
+                    muted
+                    loop
+                    playsinline
+                    preload="metadata"
+                    onmouseover="this.play()"
+                    onmouseout="this.pause();this.currentTime=0;"
+                    aria-label="Money Expenses Tracker demo video">
+              </video>
+            </div>
+
+            <!-- Project Content -->
+            <div class="project-content">
+              <h3 id="expense-tracker-heading">Money Expenses Tracker Application</h3>
+
+              <p aria-labelledby="expense-tracker-heading">
+                A production-ready expense tracking mobile application built with Flutter.
+                Supports personal and business expenses, offline-first local storage using Hive,
+                REST API integration, Arabic (RTL) support, multi-currency handling,
+                advanced analytics, budgets, recurring expenses, and real-time push notifications
+                via Firebase Cloud Messaging. Built using Clean Architecture and BLoC pattern.
+              </p>
+
+              <!-- Technology Stack -->
+              <div class="tech-stack">
+                <span class="tech-badge">Flutter</span>
+                <span class="tech-badge">BLoC & Cubit</span>
+                <span class="tech-badge">Clean Architecture</span>
+                <span class="tech-badge">Hive</span>
+                <span class="tech-badge">REST API</span>
+                <span class="tech-badge">FL Chart</span>
+                <span class="tech-badge">GetIt</span>
+                <span class="tech-badge">Dio</span>
+                <span class="tech-badge">RTL Support</span>
+              </div>
+
+              <!-- Action Buttons -->
+              <div class="project-buttons">
+                <a href="https://www.linkedin.com/posts/mohamed-m-el-esh-a97999283_flutter-dart-mobiledevelopment-ugcPost-7431039577013903360-YGZf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="project-btn primary">
+                  🔗 View Post
+                </a>
+
+                <a href="https://drive.google.com/file/d/1slRoRz_m8rW4Go4l7MI2ggnlUq2ZJDKp/view"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="project-btn secondary-btn">
+                  ▶️ Live Demo
+                </a>
+
+                <a href="https://github.com/MohammedElEsh/expense-tracker-app.git"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="project-btn github-btn">
+                  💻 GitHub
+                </a>
+              </div>
+
+            </div>
+          </article>
+
+
           <!-- Project 1: Chat App -->
           <article class="project-item animate-scale animate-delay-100" role="listitem">
             <div class="project-image-wrapper">
@@ -371,37 +460,6 @@
             </div>
           </article>
 
-          <!-- Project 2: QRoll Attendance -->
-          <article class="project-item animate-scale animate-delay-200" role="listitem">
-            <div class="project-image-wrapper">
-              <video src="demos/Qroll App.mp4" muted loop playsinline preload="metadata"
-                     onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;"
-                     aria-label="QRoll Attendance App demo video"></video>
-            </div>
-            <div class="project-content">
-              <h3 id="project-2-heading">QRoll Attendance System</h3>
-              <p aria-labelledby="project-2-heading">
-                Role-based attendance app with QR code scanning, JWT authentication, and real-time messaging. 
-                Leveraged Riverpod for state management, encrypted local storage, and REST APIs within a 
-                responsive, clean UI optimized for educational institutions.
-              </p>
-              <div class="tech-stack">
-                <span class="tech-badge">Flutter</span>
-                <span class="tech-badge">Riverpod</span>
-                <span class="tech-badge">JWT</span>
-                <span class="tech-badge">QR Scanner</span>
-                <span class="tech-badge">REST API</span>
-              </div>
-              <div class="project-buttons">
-                <a href="https://www.linkedin.com/posts/mohamed-m-el-esh-a97999283_flutter-mobiledevelopment-edtech-activity-7349891273740226560-olXd"
-                   target="_blank" rel="noopener noreferrer" class="project-btn primary">🔗 View Post</a>
-                <a href="https://drive.google.com/file/d/1nXgLyhCeVJK4yZL4nVdqFSwl0jUlrhiu/view?usp=drive_link"
-                   target="_blank" rel="noopener noreferrer" class="project-btn secondary-btn">▶️ Live Demo</a>
-                <a href="https://github.com/MohammedElEsh/qroll_attendance.git"
-                   target="_blank" rel="noopener noreferrer" class="project-btn github-btn">💻 GitHub</a>
-              </div>
-            </div>
-          </article>
 
           <!-- Project 3: Al Baker -->
           <article class="project-item animate-scale animate-delay-300" role="listitem">
@@ -435,6 +493,39 @@
             </div>
           </article>
 
+
+          <!-- Project 2: QRoll Attendance -->
+          <article class="project-item animate-scale animate-delay-200" role="listitem">
+            <div class="project-image-wrapper">
+              <video src="demos/Qroll App.mp4" muted loop playsinline preload="metadata"
+                     onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;"
+                     aria-label="QRoll Attendance App demo video"></video>
+            </div>
+            <div class="project-content">
+              <h3 id="project-2-heading">QRoll Attendance System</h3>
+              <p aria-labelledby="project-2-heading">
+                Role-based attendance app with QR code scanning, JWT authentication, and real-time messaging. 
+                Leveraged Riverpod for state management, encrypted local storage, and REST APIs within a 
+                responsive, clean UI optimized for educational institutions.
+              </p>
+              <div class="tech-stack">
+                <span class="tech-badge">Flutter</span>
+                <span class="tech-badge">Riverpod</span>
+                <span class="tech-badge">JWT</span>
+                <span class="tech-badge">QR Scanner</span>
+                <span class="tech-badge">REST API</span>
+              </div>
+              <div class="project-buttons">
+                <a href="https://www.linkedin.com/posts/mohamed-m-el-esh-a97999283_flutter-mobiledevelopment-edtech-activity-7349891273740226560-olXd"
+                   target="_blank" rel="noopener noreferrer" class="project-btn primary">🔗 View Post</a>
+                <a href="https://drive.google.com/file/d/1nXgLyhCeVJK4yZL4nVdqFSwl0jUlrhiu/view?usp=drive_link"
+                   target="_blank" rel="noopener noreferrer" class="project-btn secondary-btn">▶️ Live Demo</a>
+                <a href="https://github.com/MohammedElEsh/qroll_attendance.git"
+                   target="_blank" rel="noopener noreferrer" class="project-btn github-btn">💻 GitHub</a>
+              </div>
+            </div>
+          </article>
+
           <!-- Project 4: Hungry App (In Progress) -->
           <article class="project-item animate-scale animate-delay-400" role="listitem">
             <div class="project-image-wrapper">
@@ -461,6 +552,10 @@
               </div>
             </div>
           </article>
+
+
+
+
 
         </div>
       </section>
@@ -574,7 +669,7 @@
               <li>AWS EC2</li>
               <li>AWS S3</li>
               <li>AWS Lambda</li>
-              <li>CI/CD (learning)</li>
+              <li>CI/CD</li>
             </ul>
           </div>
 
@@ -665,27 +760,6 @@
           </a>
 
 
-          <!-- Certificate 5: Berlitz English -->
-          <a href="https://drive.google.com/file/d/1Y89zgkY2fKrkboiyvzvFxuR1GY_UvaKw/view?usp=drive_link" target="_blank" class="certificate-link">
-            <article class="certificate-card animate-scale animate-delay-500" role="listitem">
-              <div class="certificate-header">
-                <span class="certificate-badge badge-languages">English</span>
-              </div>
-              <div class="certificate-image">
-                <img src="certificates/Berlitz Business English_certificate.jpg" 
-                    alt="Berlitz Business English Certificate" 
-                    loading="lazy" />
-              </div>
-              <div class="certificate-info">
-                <h3>Berlitz Business English</h3>
-                <p class="certificate-category">Professional Communication</p>
-                <p class="certificate-date">📅 2024 - Present</p>
-                <p class="certificate-duration">⏱️ Ongoing</p>
-              </div>
-            </article>
-          </a>
-
-
           
           <!-- Certificate 4: Samsung -->
           <a href="https://drive.google.com/file/d/1_l9eaa7YxDQ6lUBGTAVpqQg5tMe9f_1m/view?usp=drive_link" target="_blank" class="certificate-link">
@@ -706,6 +780,52 @@
                 <p class="certificate-category">Python</p>
                 <p class="certificate-date">📅 Jun - Sep 2023</p>
                 <p class="certificate-duration">⏱️ 4 months</p>
+              </div>
+            </article>
+          </a>
+
+          
+
+          <!-- Certificate 5: Berlitz English -->
+          <a href="https://drive.google.com/file/d/1Y89zgkY2fKrkboiyvzvFxuR1GY_UvaKw/view?usp=drive_link" target="_blank" class="certificate-link">
+            <article class="certificate-card animate-scale animate-delay-500" role="listitem">
+              <div class="certificate-header">
+                <span class="certificate-badge badge-languages">English</span>
+              </div>
+              <div class="certificate-image">
+                <img src="certificates/Berlitz Business English_certificate.jpg" 
+                    alt="Berlitz Business English Certificate" 
+                    loading="lazy" />
+              </div>
+              <div class="certificate-info">
+                <h3>Berlitz Business English</h3>
+                <p class="certificate-category">Professional Communication</p>
+                <p class="certificate-date">📅 2024 - Present</p>
+                <!-- <p class="certificate-duration">⏱️ Ongoing</p> -->
+              </div>
+            </article>
+          </a>
+
+
+          <!-- Certificate 6: EF -->
+          <a href="https://drive.google.com/file/d/1nAqsTBv1-YgbirztjNLxiPs7ut8uvIEt/view?usp=drive_link" target="_blank" class="certificate-link">
+            <!-- Certificate 6: EF -->
+            <article class="certificate-card animate-scale animate-delay-400" role="listitem">
+              <div class="certificate-header">
+                <span class="certificate-badge badge-samsung">English</span>
+              </div>
+
+              <div class="certificate-image">
+                <img src="certificates/EF SET_certificate.jpg" 
+                    alt="EF SET Certificate" 
+                    loading="lazy" />
+              </div>
+
+              <div class="certificate-info">
+                <h3>EF SET</h3>
+                <p class="certificate-category">English</p>
+                <p class="certificate-date">📅 Feb 2026</p>
+                <!-- <p class="certificate-duration">⏱️ 4 months</p> -->
               </div>
             </article>
           </a>
