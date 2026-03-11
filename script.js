@@ -122,16 +122,11 @@ document.addEventListener('DOMContentLoaded', () => {
   animationTargets.forEach(el => {
     observer.observe(el);
   });
-  // Register Service Worker
+
+  // One-time: unregister any existing Service Worker so users get fresh content (remove this block after a few weeks)
   if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('sw.js')
-        .then(registration => {
-          console.log('ServiceWorker registration successful');
-        })
-        .catch(err => {
-          console.log('ServiceWorker registration failed: ', err);
-        });
+    navigator.serviceWorker.getRegistrations().then((registrations) => {
+      registrations.forEach((registration) => registration.unregister());
     });
   }
 });

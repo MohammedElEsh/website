@@ -1,0 +1,9 @@
+# Disable caching for HTML so users always get the latest version
+/index.html
+  Cache-Control: no-cache, no-store, must-revalidate
+
+# Optional: short cache for CSS/JS (e.g. 1 hour) so updates propagate
+/*.css
+  Cache-Control: public, max-age=3600, must-revalidate
+/*.js
+  Cache-Control: public, max-age=3600, must-revalidate
