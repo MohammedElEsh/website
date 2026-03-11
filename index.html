@@ -5,6 +5,7 @@
          DOCUMENT HEAD - METADATA & CONFIGURATION
          Includes page title, character encoding, viewport, meta tags for SEO,
          external resources (fonts, styles), and structured data
+         CACHE VERSION: 1  ← Bump this on every deploy (and update ?v= in style.css + script.js)
          ======================================== -->
 
     <meta charset="UTF-8" />
@@ -85,7 +86,7 @@
     <!-- ===== MANIFEST (PWA Support) ===== -->
     <link rel="manifest" href="manifest.json" />
 
-    <!-- ===== MAIN STYLESHEET ===== -->
+    <!-- ===== MAIN STYLESHEET (bump ?v= on deploy to bust cache) ===== -->
     <link rel="stylesheet" href="style.css?v=2" />
 
     <!-- ===== STRUCTURED DATA (JSON-LD) ===== -->

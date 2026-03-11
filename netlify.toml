@@ -1,0 +1,20 @@
+# =============================================================================
+# Netlify configuration – Portfolio (mohamedelesh.com)
+# Ensures correct publish directory and that _headers are applied.
+# =============================================================================
+
+[build]
+  # Publish the current directory (no build step; static site)
+  publish = "."
+  # No build command = deploy files as-is (Netlify still runs publish)
+  # command = ""
+
+# Optional: force HTTPS and set redirects if needed
+# [[redirects]]
+#   from = "http://mohamedelesh.com/*"
+#   to = "https://mohamedelesh.com/:splat"
+#   status = 301
+#   force = true
+
+# Headers are in _headers file (file-based config); no need to duplicate here.
+# Netlify merges _headers from the publish directory automatically.
