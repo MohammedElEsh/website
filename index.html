@@ -5,7 +5,7 @@
          DOCUMENT HEAD - METADATA & CONFIGURATION
          Includes page title, character encoding, viewport, meta tags for SEO,
          external resources (fonts, styles), and structured data
-         CACHE VERSION: 1  ← Bump this on every deploy (and update ?v= in style.css + script.js)
+         Production assets: hashed by Vite at build time (see vite.config.js).
          ======================================== -->
 
     <meta charset="UTF-8" />
@@ -87,8 +87,8 @@
       rel="stylesheet"
     />
 
-    <!-- ===== MAIN STYLESHEET (bump ?v= on deploy to bust cache) ===== -->
-    <link rel="stylesheet" href="style.css?v=2" />
+    <!-- ===== MAIN STYLESHEET (processed by Vite; hashed in production) ===== -->
+    <link rel="stylesheet" href="/style.css" />
 
     <!-- ===== STRUCTURED DATA (JSON-LD) ===== -->
     <script type="application/ld+json">
@@ -1525,6 +1525,6 @@
       </svg>
     </button>
 
-    <script src="script.js?v=2"></script>
+    <script type="module" src="/script.js"></script>
   </body>
 </html>

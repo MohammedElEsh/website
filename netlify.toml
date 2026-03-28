@@ -3,8 +3,8 @@
 # =============================================================================
 
 [build]
-  # Publish the current directory (no build step; static site)
-  publish = "."
+  command = "npm run build"
+  publish = "dist"
 
 # ---------------------------------------------------------------------------
 # Cache-Control Headers
