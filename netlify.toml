@@ -1,20 +1,101 @@
 # =============================================================================
 # Netlify configuration – Portfolio (mohamedelesh.com)
-# Ensures correct publish directory and that _headers are applied.
 # =============================================================================
 
 [build]
   # Publish the current directory (no build step; static site)
   publish = "."
-  # No build command = deploy files as-is (Netlify still runs publish)
-  # command = ""
 
-# Optional: force HTTPS and set redirects if needed
-# [[redirects]]
-#   from = "http://mohamedelesh.com/*"
-#   to = "https://mohamedelesh.com/:splat"
-#   status = 301
-#   force = true
+# ---------------------------------------------------------------------------
+# Cache-Control Headers
+#
+# Strategy:
+#   • HTML / root  → no-cache, no-store, must-revalidate
+#     Browsers always revalidate with Netlify before using a cached copy.
+#     This is what ensures returning visitors get your latest deployment.
+#
+#   • CSS / JS / Images / Fonts → public, max-age=31536000, immutable
+#     Assets are treated as permanently cacheable (1 year).
+#     To bust the cache after a change, rename the file or append a query
+#     string, e.g. style.css?v=2.
+# ---------------------------------------------------------------------------
 
-# Headers are in _headers file (file-based config); no need to duplicate here.
-# Netlify merges _headers from the publish directory automatically.
+# Root — never cache
+[[headers]]
+  for = "/"
+  [headers.values]
+    Cache-Control = "no-cache, no-store, must-revalidate"
+    Pragma        = "no-cache"
+    Expires       = "0"
+
+# HTML files — never cache
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "no-cache, no-store, must-revalidate"
+    Pragma        = "no-cache"
+    Expires       = "0"
+
+# CSS — long-term cache
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# JavaScript — long-term cache
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Images — long-term cache
+[[headers]]
+  for = "/*.png"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.jpeg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.webp"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.svg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.gif"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.ico"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Fonts — long-term cache
+[[headers]]
+  for = "/*.woff"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.woff2"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.ttf"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
