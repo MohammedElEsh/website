@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <!-- ========================================
          DOCUMENT HEAD - METADATA & CONFIGURATION
@@ -128,6 +128,9 @@
          main content sections, and footer
          ======================================== -->
 
+    <!-- Progress Bar -->
+    <div class="progress-bar" id="progressBar"></div>
+
     <!-- ===== ACCESSIBILITY SKIP LINK (Keyboard Navigation) ===== -->
     <a href="#main-content" class="sr-only focus-visible"
       >Skip to main content</a
@@ -229,25 +232,51 @@
       >
         <!-- Left: Text Content -->
         <div class="hero-content animate-slide-left">
-          <h1 id="hero-heading">Mohamed M. El Esh</h1>
+          <!-- Availability Badge -->
+          <div class="availability-badge animate-fade-in animate-delay-100">
+            <span class="pulse-dot"></span>
+            Available for new opportunities
+          </div>
+
+          <h1 id="hero-heading">Mohamed M.<br />El Esh</h1>
           <p class="tagline animate-slide-left animate-delay-100">
-            Flutter Developer | Mobile App Engineer
+            Crafting High-Performance Flutter Apps &amp; Scalable Mobile
+            Architectures.
           </p>
           <p class="intro-text animate-slide-left animate-delay-200">
-            Flutter Developer with 1+ year of experience building scalable and
-            production-ready mobile applications. Specialized in Clean
-            Architecture, BLoC state management, REST API integration, and
-            creating high-performance cross-platform apps for Android and iOS.
+            Senior-level Flutter Developer specialized in Clean Architecture,
+            BLoC, and bridging the gap between elegant UI and robust backend
+            systems. I build apps that are fast, offline-capable, and
+            production-ready.
           </p>
+
           <!-- Call-to-Action Buttons -->
           <div
             class="button-group animate-slide-left animate-delay-300"
             role="group"
             aria-label="Portfolio actions"
           >
-            <a href="#projects" class="btn primary-btn" role="button"
-              >View My Work</a
+            <a
+              href="#projects"
+              class="btn primary-btn btn-with-icon"
+              role="button"
             >
+              View My Work
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="btn-icon"
+              >
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
             <a
               href="https://drive.google.com/file/d/1Qpl8tsDznZSPtFf0ArIwL6CcYmpymY-5/view?usp=drive_link"
               class="btn secondary-btn"
@@ -313,44 +342,45 @@
       >
         <h2 id="about-heading" class="animate-fade-in">About Me</h2>
         <div class="section-content">
-          <!-- Bio Paragraphs -->
-          <p class="animate-fade-in animate-delay-100">
-            I'm <strong>Mohamed M. El Esh</strong>, a passionate
-            <strong>Flutter Developer</strong> with over
-            <strong>1 year of professional experience</strong> building
-            high-quality mobile applications for Android and iOS. I specialize
-            in developing <strong>production-ready Flutter apps</strong>
-            with scalable architecture, clean code, and modern UI/UX practices.
-          </p>
+          <!-- Bio Paragraphs Layout Group -->
+          <div class="about-text">
+            <p class="animate-fade-in animate-delay-100">
+              I'm Mohamed M. El Esh, a passionate
+              <strong>Flutter Developer</strong> with over 2 years of
+              professional experience building high-quality mobile applications
+              for Android and iOS. I specialize in developing production-ready
+              Flutter apps with <strong>scalable architecture</strong>,
+              <strong>clean code</strong>, and modern UI/UX practices.
+            </p>
 
-          <p class="animate-fade-in animate-delay-200">
-            I previously worked as a
-            <strong>Flutter Developer at Cumulocode Software</strong>, where I
-            built a production expense tracking application with an
-            <strong>offline-first architecture using Hive</strong> and seamless
-            backend synchronization using <strong>REST APIs and Dio</strong>. I
-            focus on building maintainable applications using
-            <strong
-              >Clean Architecture, SOLID principles, and BLoC/Cubit</strong
-            >
-            state management.
-          </p>
+            <p class="animate-fade-in animate-delay-200">
+              I previously worked as a Flutter Developer at
+              <strong>Cumulocode Software</strong>, where I built a production
+              expense tracking application with an
+              <strong>offline-first architecture</strong> using
+              <strong>Hive</strong> and seamless backend synchronization using
+              <strong>REST APIs</strong> and <strong>Dio</strong>. I focus on
+              building maintainable applications using
+              <strong>Clean Architecture</strong>,
+              <strong>SOLID principles</strong>, and
+              <strong>BLoC/Cubit</strong> state management.
+            </p>
 
-          <p class="animate-fade-in animate-delay-300">
-            My technical experience includes
-            <strong
-              >Firebase, Supabase, REST API integration, localization, push
-              notifications, and advanced UI animations</strong
-            >. I enjoy turning complex ideas into reliable and user-friendly
-            mobile experiences. Currently, I’m expanding my skills by learning
-            <strong>Node.js for backend development</strong> to build complete
-            full-stack mobile solutions.
-          </p>
+            <p class="animate-fade-in animate-delay-300">
+              My technical experience includes <strong>Firebase</strong>,
+              <strong>Supabase</strong>, REST API integration, localization,
+              push notifications, and advanced UI animations. I enjoy turning
+              complex ideas into reliable and user-friendly mobile experiences.
+              Currently, I’m expanding my skills by learning
+              <strong>Node.js</strong> for backend development to build complete
+              full-stack mobile solutions.
+            </p>
+          </div>
 
           <!-- Statistics Cards Grid -->
           <div class="stats-grid animate-fade-in animate-delay-400">
             <div class="stat-card">
-              <span class="stat-number">8+</span>
+              <span class="stat-number">6+</span>
               <span class="stat-label">Production Apps</span>
             </div>
             <div class="stat-card">
@@ -362,7 +392,7 @@
               <span class="stat-label">Certifications</span>
             </div>
             <div class="stat-card">
-              <span class="stat-number">1+</span>
+              <span class="stat-number">2</span>
               <span class="stat-label">Years Experience</span>
             </div>
           </div>
@@ -395,29 +425,26 @@
 
             <ul class="exp-details" aria-labelledby="exp-5-heading">
               <li>
-                Developed a production-ready Expense Tracker mobile application
-                for personal and business use
+                <strong>Architected a production-ready Expense Tracker</strong>
+                from the ground up, providing robust multi-currency and RTL
+                support for personal and business use.
               </li>
               <li>
-                Implemented Clean Architecture with
-                <code>BLoC & Cubit</code> for scalable and maintainable state
-                management
+                <strong>Engineered scalable state management</strong> utilizing
+                Clean Architecture principles with <code>BLoC & Cubit</code>,
+                significantly accelerating new feature implementation.
               </li>
               <li>
-                Built offline-first data persistence using
-                <code>Hive</code> local database
+                <strong
+                  >Developed an offline-first synchronization engine</strong
+                >
+                using <code>Hive</code> and <code>Dio</code>, ensuring zero data
+                loss and seamless UX in low-connectivity environments.
               </li>
               <li>
-                Integrated REST APIs using <code>Dio</code> for data
-                synchronization
-              </li>
-              <li>
-                Added Arabic language support with full <code>RTL</code> layout
-                and multi-currency handling
-              </li>
-              <li>
-                Developed advanced analytics, budgets, recurring expenses, and
-                business management features
+                <strong>Delivered advanced business logic</strong> including
+                localized analytical charts, complex budget threshold
+                calculations, and real-time recurring logic.
               </li>
             </ul>
           </article>
@@ -560,18 +587,24 @@
       >
         <h2 id="education-heading" class="animate-fade-in">Education</h2>
         <div class="section-content">
-          <!-- Education Timeline Item -->
-          <div class="timeline-item animate-scale animate-delay-100">
-            <span class="timeline-date">2021 – 2025</span>
-            <h3>Damietta University, Egypt</h3>
-            <p>
-              <strong>Faculty of Computers and Artificial Intelligence</strong>
-            </p>
-            <p>Department: Computer Science</p>
-            <p>
-              Focus: Software Engineering, Mobile Development, Algorithms &amp;
-              Data Structures
-            </p>
+          <!-- Premium Degree Card -->
+          <div class="degree-card animate-scale animate-delay-100">
+            <div class="degree-year">
+              <span class="year-badge">2021 – 2025</span>
+            </div>
+            <div class="degree-details">
+              <h3 class="degree-title">
+                Faculty of Computers &amp; Artificial Intelligence
+              </h3>
+              <span class="university-name">Damietta University, Egypt</span>
+              <ul class="degree-info">
+                <li><strong>Department:</strong> Computer Science</li>
+                <li>
+                  <strong>Focus:</strong> Software Engineering, Mobile
+                  Development, Algorithms &amp; Data Structures
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -618,13 +651,14 @@
               </h3>
 
               <p aria-labelledby="hungry-app-heading">
-                A modern food ordering mobile application built with Flutter.
-                Users can browse categories, customize meals, add items to cart,
-                place orders, and manage their profile. The application supports
-                authentication, order history, multi-language localization, and
-                smooth user experience with responsive UI. Built using Clean
-                Architecture with BLoC state management and scalable modular
-                structure.
+                <strong>The Problem:</strong> Users lacked a cohesive,
+                multi-language food ordering app that managed state predictably
+                across complex checkout flows. <br /><br />
+                <strong>The Solution & Impact:</strong> Architected a scalable
+                Flutter application using Clean Architecture and BLoC.
+                Implemented smooth order history, authentication, and
+                localization, resulting in a cohesive user experience capable of
+                scaling to enterprise volumes.
               </p>
 
               <!-- Technology Stack -->
@@ -702,13 +736,14 @@
               </h3>
 
               <p aria-labelledby="expense-tracker-heading">
-                A production-ready expense tracking mobile application built
-                with Flutter. Supports personal and business expenses,
-                offline-first local storage using Hive, REST API integration,
-                Arabic (RTL) support, multi-currency handling, advanced
-                analytics, budgets, recurring expenses, and real-time push
-                notifications via Firebase Cloud Messaging. Built using Clean
-                Architecture and BLoC pattern.
+                <strong>The Problem:</strong> Many tracking apps fail in
+                low-connectivity areas or lack robust RTL (Arabic) support
+                combined with multi-currency logic.<br /><br />
+                <strong>The Solution & Impact:</strong> Built a
+                production-ready, offline-first app utilizing Hive for
+                persistent local storage with REST API synchronization. Achieved
+                a fully localized, high-performance tool for personal and
+                business financial reporting.
               </p>
 
               <!-- Technology Stack -->
@@ -780,11 +815,13 @@
             <div class="project-content">
               <h3 id="project-1-heading">Real-Time Chat Application</h3>
               <p aria-labelledby="project-1-heading">
-                Production-ready real-time chat app with Firebase Authentication
-                and Firestore messaging. Integrated Supabase Storage for
-                image/voice sharing and Zego SDK for HD voice/video calls. Built
-                with Clean Architecture and BLoC/Provider for maintainable state
-                management.
+                <strong>The Problem:</strong> Real-time communication apps
+                suffer from complex state management and lag during concurrent
+                media sharing.<br /><br />
+                <strong>The Solution & Impact:</strong> Engineered a robust chat
+                app leveraging Firebase, Supabase Storage, and Zego SDK for HD
+                calls. Clean Architecture ensures predictable state, providing a
+                seamless and highly responsive messaging experience.
               </p>
               <!-- Technology Stack Tags -->
               <div class="tech-stack">

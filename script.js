@@ -7,6 +7,27 @@ document.addEventListener('DOMContentLoaded', () => {
   const yearSpan = document.getElementById('year');
   const themeToggle = document.getElementById('theme-toggle');
   const scrollToTopBtn = document.getElementById('scroll-to-top');
+  const header = document.querySelector('.header');
+
+  // Update Header and Reading Progress Bar on Scroll
+  const progressBar = document.getElementById('progressBar');
+
+  window.addEventListener('scroll', () => {
+    // Header transition
+    if (window.scrollY > 50) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+
+    // Progress bar
+    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (winScroll / height) * 100;
+    if (progressBar) {
+      progressBar.style.width = scrolled + "%";
+    }
+  });
 
   // Scroll to Top Logic
   if (scrollToTopBtn) {
@@ -78,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
     themeToggle.addEventListener('click', () => {
       const currentTheme = document.documentElement.getAttribute('data-theme');
       let newTheme;
-      
+
       if (currentTheme === 'dark') {
         newTheme = 'light';
         themeToggle.setAttribute('aria-checked', 'false');
@@ -86,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
         newTheme = 'dark';
         themeToggle.setAttribute('aria-checked', 'true');
       }
-      
+
       document.documentElement.setAttribute('data-theme', newTheme);
       localStorage.setItem('theme', newTheme);
     });
@@ -99,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
-  
+
   // IntersectionObserver for scroll animations
   const observerOptions = {
     threshold: 0.15
@@ -123,7 +144,13 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(el);
   });
 
-  // One-time: unregister any existing Service Worker so users get fresh content (remove this block after a few weeks)
+  // Cursor Spotlight Effect
+  document.body.addEventListener("mousemove", e => {
+    document.body.style.setProperty('--mouse-x', `${e.clientX}px`);
+    document.body.style.setProperty('--mouse-y', `${e.clientY}px`);
+  });
+
+  // One-time: unregister any existing Service Worker so users get fresh content
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.getRegistrations().then((registrations) => {
       registrations.forEach((registration) => registration.unregister());
